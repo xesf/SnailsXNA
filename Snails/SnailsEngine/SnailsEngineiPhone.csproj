@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A435643-7166-40E6-B0E6-A76419EC5E4B}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TwoBrainsGames.SnailsEngine</RootNamespace>
+    <AssemblyName>TwoBrainsGames.SnailsEngine</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;MONOGAME;IOS;IPHONE;GAME_START_MODE_B</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncProcessor.cs" />
+    <Compile Include="BrainEngineExtensions.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="ContentReaders\ScreensDataReader.cs" />
+    <Compile Include="ContentReaders\StageDataReader.cs" />
+    <Compile Include="ContentReaders\TutorialReader.cs" />
+    <Compile Include="Debuging\AssertionException.cs" />
+    <Compile Include="Debuging\DebugInfo.cs" />
+    <Compile Include="Debuging\DebugItem.cs" />
+    <Compile Include="Debuging\DebugWindow.cs" />
+    <Compile Include="Effects\BlinkEffect.cs" />
+    <Compile Include="Effects\PitchEffect.cs" />
+    <Compile Include="Effects\PopOutEffect.cs" />
+    <Compile Include="Effects\StageStartCameraZoomEffect.cs" />
+    <Compile Include="Effects\TrembleEffect.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Formater.cs" />
+    <Compile Include="IAsyncOperation.cs" />
+    <Compile Include="Input\DebugOptionsInput.cs" />
+    <Compile Include="Input\GameplayInput.cs" />
+    <Compile Include="HddAccessIcon.cs" />
+    <Compile Include="ISnailsDataFileSerializable.cs" />
+    <Compile Include="Player\PlayerProfile.cs" />
+    <Compile Include="Player\PlayersProfileManagerCROSS.cs" />
+    <Compile Include="Player\PlayersProfileManager.cs" />
+    <Compile Include="Player\PlayerStageStats.cs" />
+    <Compile Include="Player\PlayerStats.cs" />
+    <Compile Include="Screens\BrainsLogoScreen.cs" />
+    <Compile Include="Screens\AutoSaveScreen.cs" />
+    <Compile Include="Screens\CommonControls\UIArrows.cs" />
+    <Compile Include="Screens\CommonControls\UIAsync.cs" />
+    <Compile Include="Screens\CommonControls\UICaption.cs" />
+    <Compile Include="Screens\CommonControls\UICreditsButton.cs" />
+    <Compile Include="Screens\CommonControls\UICreditsPanel.cs" />
+    <Compile Include="Screens\CommonControls\UIFooterMessage.cs" />
+    <Compile Include="Screens\CommonControls\UIHowToPlayWindow.cs" />
+    <Compile Include="Screens\CommonControls\UIInstructionBar.cs" />
+    <Compile Include="Screens\CommonControls\UIInstructionLabel.cs" />
+    <Compile Include="Screens\CommonControls\UIIntroPicture.cs" />
+    <Compile Include="Screens\CommonControls\UILanguageMenu.cs" />
+    <Compile Include="Screens\CommonControls\UILocker.cs" />
+    <Compile Include="Screens\CommonControls\UIMainMenuBodyPanel.cs" />
+    <Compile Include="Screens\CommonControls\UIMiniSnailsTitle.cs" />
+    <Compile Include="Screens\CommonControls\UISnail.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsBoard.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsButton.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMedal.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMenu.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMenuItem.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMenuTitle.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsSlider.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsSliderMenuItem.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsStageGoalIcon.cs" />
+    <Compile Include="Screens\CommonControls\UISnailStamp.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsThemeIcon.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsTitle.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsWindow.cs" />
+    <Compile Include="Screens\CommonControls\UISoundMenu.cs" />
+    <Compile Include="Screens\CommonControls\UIStars.cs" />
+    <Compile Include="Screens\CommonControls\UIThemeScrollablePanel.cs" />
+    <Compile Include="Screens\CommonControls\UITutorialTopic.cs" />
+    <Compile Include="Screens\CommonControls\UIValuedCaption.cs" />
+    <Compile Include="Screens\CommonControls\UIXBoxControls.cs" />
+    <Compile Include="Screens\DebugOptionsScreen.cs" />
+    <Compile Include="Screens\HowToPlayScreen.cs" />
+    <Compile Include="Screens\InGameOptionsScreen.cs" />
+    <Compile Include="Screens\GameplayScreen.cs" />
+    <Compile Include="Screens\MainMenuScreen.cs" />
+    <Compile Include="Screens\MissionFailedScreen.cs" />
+    <Compile Include="Screens\NewGameScreen.cs" />
+    <Compile Include="Screens\OptionsScreen.cs" />
+    <Compile Include="Screens\OverscanScreen.cs" />
+    <Compile Include="Screens\QuitGameScreen.cs" />
+    <Compile Include="Screens\ScreenTypes.cs" />
+    <Compile Include="Screens\SnailsScreen.cs" />
+    <Compile Include="Screens\StageCompletedScreen.cs" />
+    <Compile Include="Screens\StageStartScreen.cs" />
+    <Compile Include="Screens\StartupScreen.cs" />
+    <Compile Include="Screens\ThemeSelectionLDScreen.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStageInfo.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStagesPanel.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStagesPanelLD.cs" />
+    <Compile Include="Screens\ThemeSelection\UITheme.cs" />
+    <Compile Include="Screens\ThemeSelection\ThemeSelectionScreen.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStage.cs" />
+    <Compile Include="Screens\ThemeSelection\UIThemeLD.cs" />
+    <Compile Include="Screens\ThemeSelection\UIThemesPanel.cs" />
+    <Compile Include="Screens\ThemeUnlockedScreen.cs" />
+    <Compile Include="Screens\Transitions\ISnailsPauseTransition.cs" />
+    <Compile Include="Screens\Transitions\LeafTransition.cs" />
+    <Compile Include="Screens\Transitions\ScreenTransitions.cs" />
+    <Compile Include="Screens\Transitions\SnailsBlurTransition.cs" />
+    <Compile Include="Screens\Transitions\SnailsGrayoutTransition.cs" />
+    <Compile Include="Screens\XBoxHelpScreen.cs" />
+    <Compile Include="SnailsException.cs" />
+    <Compile Include="StageObjects\Acid.cs" />
+    <Compile Include="StageObjects\Apple.cs" />
+    <Compile Include="StageObjects\Box.cs" />
+    <Compile Include="StageObjects\C4.cs" />
+    <Compile Include="StageObjects\CollisionTester.cs" />
+    <Compile Include="StageObjects\Copper.cs" />
+    <Compile Include="StageObjects\Crystal.cs" />
+    <Compile Include="StageObjects\Dynamite.cs" />
+    <Compile Include="StageObjects\DynamiteBox.cs" />
+    <Compile Include="StageObjects\DynamiteBoxTriggered.cs" />
+    <Compile Include="StageObjects\Explosion.cs" />
+    <Compile Include="StageObjects\FadeInOutBox.cs" />
+    <Compile Include="StageObjects\Fire.cs" />
+    <Compile Include="StageObjects\FlameLight.cs" />
+    <Compile Include="StageObjects\ICursorInteractable.cs" />
+    <Compile Include="StageObjects\InformationSign.cs" />
+    <Compile Include="StageObjects\IRotationControllable.cs" />
+    <Compile Include="StageObjects\ISwitchable.cs" />
+    <Compile Include="StageObjects\Lamp.cs" />
+    <Compile Include="StageObjects\LaserBeam.cs" />
+    <Compile Include="StageObjects\LaserBeamMirror.cs" />
+    <Compile Include="StageObjects\LaserBeamSwitch.cs" />
+    <Compile Include="StageObjects\Lava.cs" />
+    <Compile Include="StageObjects\Liquid.cs" />
+    <Compile Include="StageObjects\MovingObject.cs" />
+    <Compile Include="StageObjects\PickableObject.cs" />
+    <Compile Include="StageObjects\PopUpBox.cs" />
+    <Compile Include="StageObjects\Prop.cs" />
+    <Compile Include="StageObjects\RotationController.cs" />
+    <Compile Include="StageObjects\Salt.cs" />
+    <Compile Include="StageObjects\SingleLightEmitter.cs" />
+    <Compile Include="StageObjects\Snail.cs" />
+    <Compile Include="StageObjects\SnailCounter.cs" />
+    <Compile Include="StageObjects\SnailKing.cs" />
+    <Compile Include="StageObjects\SnailSacrificeSwitch.cs" />
+    <Compile Include="StageObjects\SnailShell.cs" />
+    <Compile Include="StageObjects\SnailTriggerSwitch.cs" />
+    <Compile Include="StageObjects\Spikes.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\CrownAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\HelmetAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\ISnailSpriteAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\SnailSpriteAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\RocketAccessory.cs" />
+    <Compile Include="StageObjects\StageEntrance.cs" />
+    <Compile Include="StageObjects\StageExit.cs" />
+    <Compile Include="StageObjects\StageObject.cs" />
+    <Compile Include="StageObjects\StageProp.cs" />
+    <Compile Include="StageObjects\Switch.cs" />
+    <Compile Include="StageObjects\TileObject.cs" />
+    <Compile Include="StageObjects\Water.cs" />
+    <Compile Include="StageObjects\WaterBubble.cs" />
+    <Compile Include="Stages\CustomStage.cs" />
+    <Compile Include="Stages\HUD\HUDItemWarpButton.cs" />
+    <Compile Include="Stages\HUD\HUDMinimap.cs" />
+    <Compile Include="Stages\HUD\ToolsMenu.cs" />
+    <Compile Include="Stages\InGameCamera.cs" />
+    <Compile Include="Stages\Lighting\LightManager.cs" />
+    <Compile Include="Stages\Lighting\LightSource.cs" />
+    <Compile Include="Stages\MedalScoreCriteria.cs" />
+    <Compile Include="Stages\HUD\HUDItem.cs" />
+    <Compile Include="Stages\HUD\HUDItemGoal.cs" />
+    <Compile Include="Stages\HUD\HUDItemMissionStatus.cs" />
+    <Compile Include="Stages\HUD\HUDItemSnailsCounter.cs" />
+    <Compile Include="Stages\HUD\HUDItemSnailsDelivered.cs" />
+    <Compile Include="Stages\HUD\HUDItemTimer.cs" />
+    <Compile Include="Stages\HUD\StageHUD.cs" />
+    <Compile Include="Stages\IncomingMessage.cs" />
+    <Compile Include="Stages\Levels.cs" />
+    <Compile Include="Stages\SnailsBackgroundLayer.cs" />
+    <Compile Include="Stages\StageSound.cs" />
+    <Compile Include="Stages\StageSoundSource.cs" />
+    <Compile Include="Stages\StageStats.cs" />
+    <Compile Include="StageObjects\TeleportEntrance.cs" />
+    <Compile Include="StageObjects\TeleportExit.cs" />
+    <Compile Include="StageObjects\Trampoline.cs" />
+    <Compile Include="StageObjects\Vitamin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\CreditsScreen.cs" />
+    <Compile Include="Screens\TransitionScreen.cs" />
+    <Compile Include="GameSettings.cs" />
+    <Compile Include="SnailsGame.cs" />
+    <Compile Include="StageObjects\WalkTester.cs" />
+    <Compile Include="Stages\Board.cs" />
+    <Compile Include="Stages\BoardPath.cs" />
+    <Compile Include="Stages\BoardPathNode.cs" />
+    <Compile Include="Stages\PathSegment.cs" />
+    <Compile Include="Stages\Stage.cs" />
+    <Compile Include="Stages\StageCursor.cs" />
+    <Compile Include="Stages\StageData.cs" />
+    <Compile Include="Stages\Tile.cs" />
+    <Compile Include="Stages\TileCell.cs" />
+    <Compile Include="Stages\TileCellCoords.cs" />
+    <Compile Include="Stages\TileFragments.cs" />
+    <Compile Include="ToolObjects\ToolApple.cs" />
+    <Compile Include="ToolObjects\ToolBox.cs" />
+    <Compile Include="ToolObjects\ToolCopper.cs" />
+    <Compile Include="ToolObjects\ToolCrate.cs" />
+    <Compile Include="ToolObjects\ToolDynamite.cs" />
+    <Compile Include="ToolObjects\ToolDynamiteBox.cs" />
+    <Compile Include="ToolObjects\ToolDynamiteBoxTriggered.cs" />
+    <Compile Include="ToolObjects\ToolEndMission.cs" />
+    <Compile Include="ToolObjects\ToolObject.cs" />
+    <Compile Include="ToolObjects\ToolSalt.cs" />
+    <Compile Include="ToolObjects\ToolTrampoline.cs" />
+    <Compile Include="ToolObjects\ToolVitamin.cs" />
+    <Compile Include="Tutorials\Tutorial.cs" />
+    <Compile Include="Tutorials\TutorialImage.cs" />
+    <Compile Include="Tutorials\TutorialItem.cs" />
+    <Compile Include="Tutorials\TutorialLine.cs" />
+    <Compile Include="Tutorials\TutorialText.cs" />
+    <Compile Include="Tutorials\TutorialTopic.cs" />
+    <Compile Include="Tutorials\TutorialTopicParser.cs" />
+    <Compile Include="Effects\LiquidGravityEffect.cs" />
+    <Compile Include="StageObjects\LiquidPipe.cs" />
+    <Compile Include="StageObjects\LiquidPump.cs" />
+    <Compile Include="StageObjects\LiquidSwitch.cs" />
+    <Compile Include="StageObjects\LiquidTap.cs" />
+    <Compile Include="StageObjects\ControllableLaserCannon.cs" />
+    <Compile Include="StageObjects\DirectionalBox.cs" />
+    <Compile Include="StageObjects\DynamiteBoxCounted.cs" />
+    <Compile Include="StageObjects\EvilSnail.cs" />
+    <Compile Include="StageObjects\FixedLaserCannon.cs" />
+    <Compile Include="StageObjects\LaserCannonBase.cs" />
+    <Compile Include="StageObjects\Slime.cs" />
+    <Compile Include="StageObjects\StageObjectFactory.cs" />
+    <Compile Include="StageObjects\TutorialSign.cs" />
+    <Compile Include="Stages\Lighting\SpotlightLightSource.cs" />
+    <Compile Include="Stages\HUD\FastForwardStrips.cs" />
+    <Compile Include="Stages\HUD\HUDItemControls.cs" />
+    <Compile Include="Stages\GameplayRecorder.cs" />
+    <Compile Include="Screens\AwardsScreen.cs" />
+    <Compile Include="Screens\PlayerStatsScreen.cs" />
+    <Compile Include="Screens\PurchaseScreen.cs" />
+    <Compile Include="Screens\RecipeScreen.cs" />
+    <Compile Include="Screens\TutorialScreen.cs" />
+    <Compile Include="Screens\CommonControls\UIAchievement.cs" />
+    <Compile Include="Screens\CommonControls\UIBackButton.cs" />
+    <Compile Include="Screens\CommonControls\UICloseButton.cs" />
+    <Compile Include="Screens\CommonControls\UIGoldMedalInfoPanel.cs" />
+    <Compile Include="Screens\CommonControls\UILoading.cs" />
+    <Compile Include="Screens\CommonControls\UIPlayerStat.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsScrollablePanel.cs" />
+    <Compile Include="ToolObjects\ToolDirectionalBox.cs" />
+    <Compile Include="AsyncOperationController.cs" />
+    <Compile Include="InfoKeys.cs" />
+    <Compile Include="Effects\FloatingEffect.cs" />
+    <Compile Include="Player\Achievement.cs" />
+    <Compile Include="Player\Achievements.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.iOS.csproj">
+      <Project>{734EAA48-F1CA-481A-B391-0285BC0E8B40}</Project>
+      <Name>Lidgren.Network.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.iOS.csproj">
+      <Project>{DB8508BB-9849-4CC2-BC0F-8EB5DACB3C47}</Project>
+      <Name>MonoGame.Framework.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrainEngine\BrainEngineiPhone.csproj">
+      <Project>{9990E3CC-6BD4-4CF9-8D79-4FC6652EDB11}</Project>
+      <Name>BrainEngineiPhone</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

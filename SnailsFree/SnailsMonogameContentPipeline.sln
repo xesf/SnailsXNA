@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnailsExtensionContentMonogameContentPipeline", "SnailsExtensionContent\SnailsExtensionContentMonogameContentPipeline.csproj", "{D1ADC19E-79B1-4931-AD23-3F23A570A64E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnailsResourcesCustomMonogameContentPipeline", "SnailsResourcesCustom\SnailsResourcesCustomMonogameContentPipeline.contentproj", "{07C987C0-29AF-48F0-BDC0-738E06221DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnailsResourcesMonogameContentPipeline", "SnailsResources\SnailsResourcesMonogameContentPipeline.contentproj", "{C36100D7-2B27-4A1F-9B8D-74D25D71D8D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnailsResourcesDebugMonogameContentPipeline", "SnailsResourcesDebug\SnailsResourcesDebugMonogameContentPipeline.contentproj", "{DFD1EDE3-EF33-49B4-AACE-19C5AD3B1730}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnailsMonogameContentPipeline", "SnailsFree\SnailsMonogameContentPipeline.csproj", "{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainEngineMonogameContentPipeline", "BrainEngine\BrainEngineMonogameContentPipeline.csproj", "{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnailsEngineMonogameContentPipeline", "SnailsEngine\SnailsEngineMonogameContentPipeline.csproj", "{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release Android|x86 = Release Android|x86
+		Release iOS|x86 = Release iOS|x86
+		Release Linux|x86 = Release Linux|x86
+		Release OSX|x86 = Release OSX|x86
+		Release PSM|x86 = Release PSM|x86
+		Release Windows8|x86 = Release Windows8|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release Android|x86.ActiveCfg = Release|x86
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release Android|x86.Build.0 = Release|x86
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release iOS|x86.ActiveCfg = Release|x86
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release iOS|x86.Build.0 = Release|x86
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release Linux|x86.ActiveCfg = Release|x86
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release Linux|x86.Build.0 = Release|x86
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release OSX|x86.ActiveCfg = Release|x86
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release OSX|x86.Build.0 = Release|x86
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release PSM|x86.ActiveCfg = Release|x86
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release PSM|x86.Build.0 = Release|x86
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release Windows8|x86.ActiveCfg = Release|x86
+		{D1ADC19E-79B1-4931-AD23-3F23A570A64E}.Release Windows8|x86.Build.0 = Release|x86
+		{07C987C0-29AF-48F0-BDC0-738E06221DE3}.Release Android|x86.ActiveCfg = Release|x86
+		{07C987C0-29AF-48F0-BDC0-738E06221DE3}.Release iOS|x86.ActiveCfg = Release|x86
+		{07C987C0-29AF-48F0-BDC0-738E06221DE3}.Release Linux|x86.ActiveCfg = Release|x86
+		{07C987C0-29AF-48F0-BDC0-738E06221DE3}.Release OSX|x86.ActiveCfg = Release|x86
+		{07C987C0-29AF-48F0-BDC0-738E06221DE3}.Release PSM|x86.ActiveCfg = Release|x86
+		{07C987C0-29AF-48F0-BDC0-738E06221DE3}.Release Windows8|x86.ActiveCfg = Release|x86
+		{C36100D7-2B27-4A1F-9B8D-74D25D71D8D6}.Release Android|x86.ActiveCfg = Debug|Any CPU
+		{C36100D7-2B27-4A1F-9B8D-74D25D71D8D6}.Release iOS|x86.ActiveCfg = Debug|Any CPU
+		{C36100D7-2B27-4A1F-9B8D-74D25D71D8D6}.Release Linux|x86.ActiveCfg = Debug|Any CPU
+		{C36100D7-2B27-4A1F-9B8D-74D25D71D8D6}.Release OSX|x86.ActiveCfg = Debug|Any CPU
+		{C36100D7-2B27-4A1F-9B8D-74D25D71D8D6}.Release PSM|x86.ActiveCfg = Debug|Any CPU
+		{C36100D7-2B27-4A1F-9B8D-74D25D71D8D6}.Release Windows8|x86.ActiveCfg = Debug|Any CPU
+		{DFD1EDE3-EF33-49B4-AACE-19C5AD3B1730}.Release Android|x86.ActiveCfg = Debug|Any CPU
+		{DFD1EDE3-EF33-49B4-AACE-19C5AD3B1730}.Release iOS|x86.ActiveCfg = Debug|Any CPU
+		{DFD1EDE3-EF33-49B4-AACE-19C5AD3B1730}.Release Linux|x86.ActiveCfg = Debug|Any CPU
+		{DFD1EDE3-EF33-49B4-AACE-19C5AD3B1730}.Release OSX|x86.ActiveCfg = Debug|Any CPU
+		{DFD1EDE3-EF33-49B4-AACE-19C5AD3B1730}.Release PSM|x86.ActiveCfg = Debug|Any CPU
+		{DFD1EDE3-EF33-49B4-AACE-19C5AD3B1730}.Release Windows8|x86.ActiveCfg = Debug|Any CPU
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release Android|x86.ActiveCfg = Release Android|x86
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release Android|x86.Build.0 = Release Android|x86
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release iOS|x86.ActiveCfg = Release iOS|x86
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release iOS|x86.Build.0 = Release iOS|x86
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release Linux|x86.ActiveCfg = Release Linux|x86
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release Linux|x86.Build.0 = Release Linux|x86
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release OSX|x86.ActiveCfg = Release OSX|x86
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release OSX|x86.Build.0 = Release OSX|x86
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release PSM|x86.ActiveCfg = Release PSM|x86
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release PSM|x86.Build.0 = Release PSM|x86
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release Windows8|x86.ActiveCfg = Release Windows8|x86
+		{656A33C6-8AB3-4752-AAC1-DE2CA016BB06}.Release Windows8|x86.Build.0 = Release Windows8|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release Android|x86.ActiveCfg = Release|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release Android|x86.Build.0 = Release|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release iOS|x86.ActiveCfg = Release|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release iOS|x86.Build.0 = Release|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release Linux|x86.ActiveCfg = Release|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release Linux|x86.Build.0 = Release|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release OSX|x86.ActiveCfg = Release|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release OSX|x86.Build.0 = Release|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release PSM|x86.ActiveCfg = Release|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release PSM|x86.Build.0 = Release|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release Windows8|x86.ActiveCfg = Release|x86
+		{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}.Release Windows8|x86.Build.0 = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release Android|x86.ActiveCfg = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release Android|x86.Build.0 = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release iOS|x86.ActiveCfg = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release iOS|x86.Build.0 = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release Linux|x86.ActiveCfg = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release Linux|x86.Build.0 = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release OSX|x86.ActiveCfg = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release OSX|x86.Build.0 = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release PSM|x86.ActiveCfg = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release PSM|x86.Build.0 = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release Windows8|x86.ActiveCfg = Release|x86
+		{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}.Release Windows8|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{EFD2680A-42BC-472B-AAC0-F90ABFC3B9BC}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwoBrainsGames.Snails</RootNamespace>
+    <AssemblyName>TwoBrainsGames.Snails</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaCrossPlatformGroupID>b91b0a77-c794-4f08-9535-7bce4d6dcac7</XnaCrossPlatformGroupID>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <XnaUpgrade>
+    </XnaUpgrade>
+    <XnaOutputType>Library</XnaOutputType>
+    <XnaProfile>HiDef</XnaProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/GameEngine/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>TRACE;DEBUG;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug Demo|Xbox 360'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Xbox 360\Debug Demo\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;XBOX;XBOX360;DEMO</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Xbox 360\Debug\TwoBrainsGames.Snails.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug Beta|Xbox 360'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Xbox 360\Debug Beta\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;XBOX;XBOX360;BETA</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Xbox 360\Debug\TwoBrainsGames.Snails.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <XnaCompressContent>True</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Beta|Xbox 360'">
+    <OutputPath>bin\Xbox 360\Release Beta\</OutputPath>
+    <DefineConstants>TRACE;XBOX;XBOX360;BETA</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Xbox 360\Release\TwoBrainsGames.Snails.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Demo|Xbox 360'">
+    <OutputPath>bin\Xbox 360\Release Demo\</OutputPath>
+    <DefineConstants>TRACE;XBOX;XBOX360;DEMO</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Xbox 360\Release\TwoBrainsGames.Snails.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AsyncProcessor.cs" />
+    <Compile Include="BrainEngineExtensions.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="ContentReaders\ScreensDataReader.cs" />
+    <Compile Include="ContentReaders\StageDataReader.cs" />
+    <Compile Include="ContentReaders\TutorialReader.cs" />
+    <Compile Include="Debuging\DebugInfo.cs" />
+    <Compile Include="Debuging\DebugItem.cs" />
+    <Compile Include="Debuging\DebugWindow.cs" />
+    <Compile Include="Effects\BlinkEffect.cs" />
+    <Compile Include="Effects\FlickEffect.cs" />
+    <Compile Include="Effects\LiquidGravityEffect.cs" />
+    <Compile Include="Effects\PitchEffect.cs" />
+    <Compile Include="Effects\PopOutEffect.cs" />
+    <Compile Include="Effects\StageStartCameraZoomEffect.cs" />
+    <Compile Include="Effects\TrembleEffect.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Formater.cs" />
+    <Compile Include="IAsyncOperation.cs" />
+    <Compile Include="Input\DebugOptionsInput.cs" />
+    <Compile Include="Input\GameplayInput.cs" />
+    <Compile Include="HddAccessIcon.cs" />
+    <Compile Include="ISnailsDataFileSerializable.cs" />
+    <Compile Include="Localization\Language_en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language_en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\Language_pt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language_pt.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Player\PlayerProfile.cs" />
+    <Compile Include="Player\PlayersProfileManager.cs" />
+    <Compile Include="Player\PlayersProfileManagerXBOX.cs" />
+    <Compile Include="Player\PlayerStageStats.cs" />
+    <Compile Include="Player\PlayerStats.cs" />
+    <Compile Include="Screens\BrainsLogoScreen.cs" />
+    <Compile Include="Screens\AutoSaveScreen.cs" />
+    <Compile Include="Screens\CommonControls\UIArrows.cs" />
+    <Compile Include="Screens\CommonControls\UIAsync.cs" />
+    <Compile Include="Screens\CommonControls\UICaption.cs" />
+    <Compile Include="Screens\CommonControls\UICreditsButton.cs" />
+    <Compile Include="Screens\CommonControls\UICreditsPanel.cs" />
+    <Compile Include="Screens\CommonControls\UIFooterMessage.cs" />
+    <Compile Include="Screens\CommonControls\UIHowToPlayWindow.cs" />
+    <Compile Include="Screens\CommonControls\UIInstructionBar.cs" />
+    <Compile Include="Screens\CommonControls\UIInstructionLabel.cs" />
+    <Compile Include="Screens\CommonControls\UIIntroPicture.cs" />
+    <Compile Include="Screens\CommonControls\UILanguageMenu.cs" />
+    <Compile Include="Screens\CommonControls\UILocker.cs" />
+    <Compile Include="Screens\CommonControls\UIMainMenuBodyPanel.cs" />
+    <Compile Include="Screens\CommonControls\UIMiniSnailsTitle.cs" />
+    <Compile Include="Screens\CommonControls\UISnail.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsBoard.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsButton.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMedal.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMenu.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMenuItem.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMenuTitle.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsSlider.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsSliderMenuItem.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsStageGoalIcon.cs" />
+    <Compile Include="Screens\CommonControls\UISnailStamp.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsThemeIcon.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsTitle.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsWindow.cs" />
+    <Compile Include="Screens\CommonControls\UISoundMenu.cs" />
+    <Compile Include="Screens\CommonControls\UIStars.cs" />
+    <Compile Include="Screens\CommonControls\UIThemeScrollablePanel.cs" />
+    <Compile Include="Screens\CommonControls\UITutorialTopic.cs" />
+    <Compile Include="Screens\CommonControls\UIValuedCaption.cs" />
+    <Compile Include="Screens\CommonControls\UIXBoxControls.cs" />
+    <Compile Include="Screens\DebugOptionsScreen.cs" />
+    <Compile Include="Screens\HowToPlayScreen.cs" />
+    <Compile Include="Screens\InGameOptionsScreen.cs" />
+    <Compile Include="Screens\GameplayScreen.cs" />
+    <Compile Include="Screens\MainMenuScreen.cs" />
+    <Compile Include="Screens\MissionFailedScreen.cs" />
+    <Compile Include="Screens\NewGameScreen.cs" />
+    <Compile Include="Screens\OptionsScreen.cs" />
+    <Compile Include="Screens\OverscanScreen.cs" />
+    <Compile Include="Screens\QuitGameScreen.cs" />
+    <Compile Include="Screens\ScreenTypes.cs" />
+    <Compile Include="Screens\SnailsScreen.cs" />
+    <Compile Include="Screens\StageCompletedScreen.cs" />
+    <Compile Include="Screens\StageStartScreen.cs" />
+    <Compile Include="Screens\StartupScreen.cs" />
+    <Compile Include="Screens\ThemeSelectionLDScreen.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStageInfo.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStagesPanel.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStagesPanelLD.cs" />
+    <Compile Include="Screens\ThemeSelection\UITheme.cs" />
+    <Compile Include="Screens\ThemeSelection\ThemeSelectionScreen.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStage.cs" />
+    <Compile Include="Screens\ThemeSelection\UIThemeLD.cs" />
+    <Compile Include="Screens\ThemeSelection\UIThemesPanel.cs" />
+    <Compile Include="Screens\ThemeUnlockedScreen.cs" />
+    <Compile Include="Screens\Transitions\ISnailsPauseTransition.cs" />
+    <Compile Include="Screens\Transitions\LeafTransition.cs" />
+    <Compile Include="Screens\Transitions\ScreenTransitions.cs" />
+    <Compile Include="Screens\Transitions\SnailsBlurTransition.cs" />
+    <Compile Include="Screens\Transitions\SnailsGrayoutTransition.cs" />
+    <Compile Include="Screens\XBoxHelpScreen.cs" />
+    <Compile Include="SnailsException.cs" />
+    <Compile Include="StageObjects\Acid.cs" />
+    <Compile Include="StageObjects\Apple.cs" />
+    <Compile Include="StageObjects\Box.cs" />
+    <Compile Include="StageObjects\C4.cs" />
+    <Compile Include="StageObjects\CollisionTester.cs" />
+    <Compile Include="StageObjects\Copper.cs" />
+    <Compile Include="StageObjects\Crystal.cs" />
+    <Compile Include="StageObjects\Dynamite.cs" />
+    <Compile Include="StageObjects\DynamiteBox.cs" />
+    <Compile Include="StageObjects\DynamiteBoxTriggered.cs" />
+    <Compile Include="StageObjects\EvilSnail.cs" />
+    <Compile Include="StageObjects\Explosion.cs" />
+    <Compile Include="StageObjects\FadeInOutBox.cs" />
+    <Compile Include="StageObjects\Fire.cs" />
+    <Compile Include="StageObjects\FlameLight.cs" />
+    <Compile Include="StageObjects\ICursorInteractable.cs" />
+    <Compile Include="StageObjects\InformationSign.cs" />
+    <Compile Include="StageObjects\IRotationControllable.cs" />
+    <Compile Include="StageObjects\ISwitchable.cs" />
+    <Compile Include="StageObjects\ISwitchAction.cs" />
+    <Compile Include="StageObjects\Lamp.cs" />
+    <Compile Include="StageObjects\LaserBeam.cs" />
+    <Compile Include="StageObjects\LaserBeamMirror.cs" />
+    <Compile Include="StageObjects\LaserBeamSource.cs" />
+    <Compile Include="StageObjects\LaserBeamSwitch.cs" />
+    <Compile Include="StageObjects\Lava.cs" />
+    <Compile Include="StageObjects\Liquid.cs" />
+    <Compile Include="StageObjects\LiquidPipe.cs" />
+    <Compile Include="StageObjects\LiquidPump.cs" />
+    <Compile Include="StageObjects\LiquidSwitch.cs" />
+    <Compile Include="StageObjects\LiquidTap.cs" />
+    <Compile Include="StageObjects\MovingObject.cs" />
+    <Compile Include="StageObjects\PickableObject.cs" />
+    <Compile Include="StageObjects\PopUpBox.cs" />
+    <Compile Include="StageObjects\Prop.cs" />
+    <Compile Include="StageObjects\RotationController.cs" />
+    <Compile Include="StageObjects\Salt.cs" />
+    <Compile Include="StageObjects\SingleLightEmitter.cs" />
+    <Compile Include="StageObjects\Snail.cs" />
+    <Compile Include="StageObjects\SnailCounter.cs" />
+    <Compile Include="StageObjects\SnailKing.cs" />
+    <Compile Include="StageObjects\SnailSacrificeSwitch.cs" />
+    <Compile Include="StageObjects\SnailShell.cs" />
+    <Compile Include="StageObjects\SnailTriggerSwitch.cs" />
+    <Compile Include="StageObjects\Spikes.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\CrownAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\HelmetAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\ISnailSpriteAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\SnailSpriteAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\RocketAccessory.cs" />
+    <Compile Include="StageObjects\StageEntrance.cs" />
+    <Compile Include="StageObjects\StageExit.cs" />
+    <Compile Include="StageObjects\StageObject.cs" />
+    <Compile Include="StageObjects\StageProp.cs" />
+    <Compile Include="StageObjects\Switch.cs" />
+    <Compile Include="StageObjects\TileObject.cs" />
+    <Compile Include="StageObjects\Water.cs" />
+    <Compile Include="StageObjects\WaterBubble.cs" />
+    <Compile Include="Stages\CustomStage.cs" />
+    <Compile Include="Stages\GameplayRecorder.cs" />
+    <Compile Include="Stages\HUD\HUDItemWarpButton.cs" />
+    <Compile Include="Stages\HUD\HUDMinimap.cs" />
+    <Compile Include="Stages\HUD\ToolsMenu.cs" />
+    <Compile Include="Stages\InGameCamera.cs" />
+    <Compile Include="Stages\Lighting\LightManager.cs" />
+    <Compile Include="Stages\Lighting\LightSource.cs" />
+    <Compile Include="Stages\MedalScoreCriteria.cs" />
+    <Compile Include="Stages\HUD\HUDItem.cs" />
+    <Compile Include="Stages\HUD\HUDItemGoal.cs" />
+    <Compile Include="Stages\HUD\HUDItemMissionStatus.cs" />
+    <Compile Include="Stages\HUD\HUDItemSnailsCounter.cs" />
+    <Compile Include="Stages\HUD\HUDItemSnailsDelivered.cs" />
+    <Compile Include="Stages\HUD\HUDItemTimer.cs" />
+    <Compile Include="Stages\HUD\StageHUD.cs" />
+    <Compile Include="Stages\IncomingMessage.cs" />
+    <Compile Include="Stages\Levels.cs" />
+    <Compile Include="Stages\SnailsBackgroundLayer.cs" />
+    <Compile Include="Stages\StageSound.cs" />
+    <Compile Include="Stages\StageSoundSource.cs" />
+    <Compile Include="Stages\StageStats.cs" />
+    <Compile Include="StageObjects\TeleportEntrance.cs" />
+    <Compile Include="StageObjects\TeleportExit.cs" />
+    <Compile Include="StageObjects\Trampoline.cs" />
+    <Compile Include="StageObjects\Vitamin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\CreditsScreen.cs" />
+    <Compile Include="Screens\TransitionScreen.cs" />
+    <Compile Include="GameSettings.cs" />
+    <Compile Include="SnailsGame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StageObjects\WalkTester.cs" />
+    <Compile Include="Stages\Board.cs" />
+    <Compile Include="Stages\BoardPath.cs" />
+    <Compile Include="Stages\BoardPathNode.cs" />
+    <Compile Include="Stages\PathSegment.cs" />
+    <Compile Include="Stages\Stage.cs" />
+    <Compile Include="Stages\StageCursor.cs" />
+    <Compile Include="Stages\StageData.cs" />
+    <Compile Include="Stages\Tile.cs" />
+    <Compile Include="Stages\TileCell.cs" />
+    <Compile Include="Stages\TileCellCoords.cs" />
+    <Compile Include="Stages\TileFragments.cs" />
+    <Compile Include="ToolObjects\ToolApple.cs" />
+    <Compile Include="ToolObjects\ToolBox.cs" />
+    <Compile Include="ToolObjects\ToolCopper.cs" />
+    <Compile Include="ToolObjects\ToolCrate.cs" />
+    <Compile Include="ToolObjects\ToolDynamite.cs" />
+    <Compile Include="ToolObjects\ToolDynamiteBox.cs" />
+    <Compile Include="ToolObjects\ToolDynamiteBoxTriggered.cs" />
+    <Compile Include="ToolObjects\ToolEndMission.cs" />
+    <Compile Include="ToolObjects\ToolObject.cs" />
+    <Compile Include="ToolObjects\ToolSalt.cs" />
+    <Compile Include="ToolObjects\ToolTrampoline.cs" />
+    <Compile Include="ToolObjects\ToolVitamin.cs" />
+    <Compile Include="Tutorials\Tutorial.cs" />
+    <Compile Include="Tutorials\TutorialImage.cs" />
+    <Compile Include="Tutorials\TutorialItem.cs" />
+    <Compile Include="Tutorials\TutorialLine.cs" />
+    <Compile Include="Tutorials\TutorialText.cs" />
+    <Compile Include="Tutorials\TutorialTopic.cs" />
+    <Compile Include="Tutorials\TutorialTopicParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.3.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Language_en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Language_pt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrainEngine\BrainEngineXbox.csproj">
+      <Project>{E7B80B44-5DAF-41F1-937F-1B1D9325406F}</Project>
+      <Name>BrainEngineXbox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

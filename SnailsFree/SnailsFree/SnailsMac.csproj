@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E489E2F-F843-41F0-B21B-98F05B9B98B3}</ProjectGuid>
+    <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TwoBrainsGames.Snails</RootNamespace>
+    <StartupObject>TwoBrainsGames.Snails.Program</StartupObject>
+    <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;MONOMAC</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <PlatformTarget>x86</PlatformTarget>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <ConsolePause>false</ConsolePause>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>false</CreatePackage>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <AssemblyName>Snails</AssemblyName>
+    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
+    <UseSGen>false</UseSGen>
+    <I18n />
+    <LinkMode>Full</LinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <LinkMode>Full</LinkMode>
+    <PlatformTarget>x86</PlatformTarget>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <ConsolePause>false</ConsolePause>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>true</CreatePackage>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <AssemblyName>Snails-Mac</AssemblyName>
+    <DefineConstants>MONOMAC</DefineConstants>
+    <UseSGen>false</UseSGen>
+    <PackageSigningKey>Developer ID Installer</PackageSigningKey>
+    <I18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
+    <PlatformTarget>x86</PlatformTarget>
+    <LinkMode>Full</LinkMode>
+    <EnableCodeSigning>true</EnableCodeSigning>
+    <ConsolePause>false</ConsolePause>
+    <EnablePackageSigning>true</EnablePackageSigning>
+    <CreatePackage>true</CreatePackage>
+    <CodeSigningKey>3rd Party Mac Developer Application</CodeSigningKey>
+    <AssemblyName>Snails-Mac</AssemblyName>
+    <UseSGen>false</UseSGen>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="MonoMac" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mac\Info.plist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Info.plist</Link>
+    </None>
+    <Content Include="Content\sfx\Objects\snail_entering.xnb" />
+    <Content Include="Content\sfx\Objects\snails_eye_blink_echo.xnb" />
+    <Content Include="Content\sfx\Objects\snail-entering-stage.xnb" />
+    <Content Include="Content\sfx\Objects\rotation-controller-tick.xnb" />
+    <Content Include="Content\sfx\Objects\switch.xnb" />
+    <Content Include="Content\sfx\Objects\laser-beam-power-up.xnb" />
+    <Content Include="Content\sfx\Objects\laser-beam.xnb" />
+    <Content Include="Content\sfx\Objects\laser-switch-electricity.xnb" />
+    <Content Include="Content\sfx\Objects\salt-dissolving.xnb" />
+    <Content Include="Content\sfx\Objects\object_burn.xnb" />
+    <Content Include="Content\sfx\Objects\water.xnb" />
+    <Content Include="Content\sfx\Objects\underwater-inpact.xnb" />
+    <Content Include="Content\sfx\Objects\water-tap.xnb" />
+    <Content Include="Content\sfx\Objects\water-pump.xnb" />
+    <Content Include="Content\sfx\Objects\snail-throw.xnb" />
+    <Content Include="Content\sfx\Objects\rocket-underwater.xnb" />
+    <Content Include="Content\sfx\Objects\snail-breath-underwater.xnb" />
+    <Content Include="Content\sfx\Objects\fire.xnb" />
+    <Content Include="Content\sfx\Objects\underwater-bubbles.xnb" />
+    <Content Include="Content\sfx\Objects\explosion_underwater.xnb" />
+    <Content Include="Content\sfx\Objects\splash.xnb" />
+    <Content Include="Content\sfx\Objects\rocket.xnb" />
+    <Content Include="Content\sfx\Objects\snail_burn.xnb" />
+    <Content Include="Content\sfx\Objects\snail_death_1.xnb" />
+    <Content Include="Content\sfx\Objects\snail_death_2.xnb" />
+    <Content Include="Content\sfx\Objects\snail_death_3.xnb" />
+    <Content Include="Content\sfx\Objects\snail_death_4.xnb" />
+    <Content Include="Content\sfx\Objects\spikes.xnb" />
+    <Content Include="Content\sfx\Objects\tool_found.xnb" />
+    <Content Include="Content\sfx\Objects\trampoline.xnb" />
+    <Content Include="Content\sfx\Objects\fade-box-in.xnb" />
+    <Content Include="Content\sfx\Objects\fade-box-out.xnb" />
+    <Content Include="Content\sfx\Objects\fuse.xnb" />
+    <Content Include="Content\sfx\Objects\salt.xnb" />
+    <Content Include="Content\sfx\Objects\snail-switch-soup.xnb" />
+    <Content Include="Content\sfx\Objects\snail-drag.xnb" />
+    <Content Include="Content\sfx\Objects\snail-switch-suck.xnb" />
+    <Content Include="Content\sfx\Objects\snail-switch-processing.xnb" />
+    <Content Include="Content\sfx\Objects\switch-lever-moving.xnb" />
+    <Content Include="Content\sfx\Objects\switch-lever-activating.xnb" />
+    <Content Include="Content\sfx\ThemeA\tile_impact.xnb" />
+    <Content Include="Content\sfx\ThemeB\tile_impact.xnb" />
+    <Content Include="Content\sfx\ThemeB\entrance.xnb" />
+    <Content Include="Content\sfx\ThemeB\breakable_tile_impact.xnb" />
+    <Content Include="Content\sfx\ThemeC\tile_impact.xnb" />
+    <Content Include="Content\sfx\ThemeC\breakable_tile_impact.xnb" />
+    <Content Include="Content\sfx\ThemeC\surroundings-2.xnb" />
+    <Content Include="Content\sfx\ThemeC\surroundings-1.xnb" />
+    <Content Include="Content\sfx\ThemeC\ambience.xnb" />
+    <Content Include="Content\sfx\ThemeC\entrance.xnb" />
+    <Content Include="Content\sfx\ThemeD\surroundings-1.xnb" />
+    <Content Include="Content\sfx\ThemeD\surroundings-2.xnb" />
+    <Content Include="Content\sfx\ThemeD\surroundings-3.xnb" />
+    <Content Include="Content\sfx\ThemeD\ambience.xnb" />
+    <Content Include="Content\sfx\ThemeD\tile_impact.xnb" />
+    <Content Include="Content\sfx\ThemeD\entrance.xnb" />
+    <Content Include="Content\sfx\ThemeD\breakable_tile_impact.xnb" />
+    <Content Include="Content\localization\language_en.xnb" />
+    <Content Include="Content\localization\language_pt.xnb" />
+    <Content Include="Content\musics\graveyard-theme-song.mp3" />
+    <Content Include="Content\sfx\caption-show.xnb" />
+    <Content Include="Content\sfx\stage-completed.xnb" />
+    <Content Include="Content\sfx\stage-completed-tic-tic.xnb" />
+    <Content Include="Content\spriteset\acid.xnb" />
+    <Content Include="Content\spriteset\evil-snail.xnb" />
+    <Content Include="Content\spriteset\liquid-pump.xnb" />
+    <Content Include="Content\spriteset\stage-objects2.xnb" />
+    <Content Include="Content\spriteset\tutorial-sign.xnb" />
+    <Content Include="Content\spriteset\ThemeA\thumbnails.xnb" />
+    <Content Include="Content\spriteset\ThemeB\thumbnails.xnb" />
+    <Content Include="Content\spriteset\ThemeC\back-layer3.xnb" />
+    <Content Include="Content\spriteset\ThemeC\moon.xnb" />
+    <Content Include="Content\spriteset\ThemeC\props.xnb" />
+    <Content Include="Content\spriteset\ThemeC\thumbnails.xnb" />
+    <Content Include="Content\spriteset\ThemeD\props.xnb" />
+    <Content Include="Content\spriteset\ThemeD\thumbnails.xnb" />
+    <Content Include="Content\spriteset\purchase.xnb" />
+    <Content Include="Content\spriteset\crates-implosions.xnb" />
+    <Content Include="Content\images\evil-snail.xnb" />
+    <Content Include="Content\images\menu-elements-2.xnb" />
+    <Content Include="Content\images\ThemeA\thumbnails.xnb" />
+    <Content Include="Content\images\ThemeB\thumbnails.xnb" />
+    <Content Include="Content\images\ThemeC\back-layer3.xnb" />
+    <Content Include="Content\images\ThemeC\thumbnails.xnb" />
+    <Content Include="Content\images\ThemeD\thumbnails.xnb" />
+    <Content Include="Content\sfx\ThemeA\ambience-1.xnb" />
+    <Content Include="Content\sfx\ThemeA\breakable_tile_impact.xnb" />
+    <Content Include="Content\sfx\ThemeA\entrance.xnb" />
+    <Content Include="Content\fonts\contactInfo.xnb" />
+    <Content Include="Content\images\common-elements-1.xnb" />
+    <Content Include="Content\images\ingame-elements-1.xnb" />
+    <Content Include="Content\musics\mines-theme.mp3" />
+    <Content Include="Content\sfx\achievement-won.xnb" />
+    <Content Include="Content\sfx\fail-stamp.xnb" />
+    <Content Include="Content\sfx\gold-medal.xnb" />
+    <Content Include="Content\sfx\menu-shown.xnb" />
+    <Content Include="Content\sfx\theme-unlocked.xnb" />
+    <Content Include="Content\sfx\Objects\bubble-pop-2.xnb" />
+    <Content Include="Content\sfx\Objects\bubble-pop-3.xnb" />
+    <Content Include="Content\sfx\Objects\crate-timer-tick.xnb" />
+    <Content Include="Content\sfx\Objects\dynamite-beep.xnb" />
+    <Content Include="Content\sfx\Objects\explosion-1.xnb" />
+    <Content Include="Content\sfx\Objects\explosion-2.xnb" />
+    <Content Include="Content\sfx\Objects\explosion-3.xnb" />
+    <Content Include="Content\sfx\Objects\spikes-closing.xnb" />
+    <Content Include="Content\sfx\Objects\spikes-hit-snail.xnb" />
+    <Content Include="Content\sfx\Objects\tool-action.xnb" />
+    <Content Include="Content\sfx\ThemeC\surroundings-3.xnb" />
+    <Content Include="Content\spriteset\button-icons.xnb" />
+    <Content Include="Content\spriteset\common-elements-1.xnb" />
+    <Content Include="Content\spriteset\ingame-elements-1.xnb" />
+    <Content Include="Content\spriteset\menu-elements-1.xnb" />
+    <Content Include="Content\localization\language_de.xnb" />
+    <Content Include="Content\localization\language_es.xnb" />
+    <Content Include="Content\localization\language_fr.xnb" />
+    <Content Include="Content\localization\language_it.xnb" />
+    <Content Include="Background.png" />
+    <Content Include="snails.icns" />
+    <Content Include="Content\images\boards.xnb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Content\musics\" />
+    <Folder Include="Content\sfx\" />
+    <Folder Include="Content\images\ThemeD\" />
+    <Folder Include="Content\images\ThemeC\" />
+    <Folder Include="Content\images\ThemeB\" />
+    <Folder Include="Content\images\ThemeA\" />
+    <Folder Include="Content\screens\controls\" />
+    <Folder Include="Content\sfx\ThemeA\" />
+    <Folder Include="Content\sfx\ThemeB\" />
+    <Folder Include="Content\sfx\ThemeC\" />
+    <Folder Include="Content\sfx\ThemeD\" />
+    <Folder Include="Content\sfx\Objects\" />
+    <Folder Include="Content\localization\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\effects\gaussian-blur-gray.xnb" />
+    <Content Include="Content\effects\gaussian-blur.xnb" />
+    <Content Include="Content\effects\water-waves.xnb" />
+    <Content Include="Content\fonts\dbgWindow.xnb" />
+    <Content Include="Content\fonts\debug.xnb" />
+    <Content Include="Content\fonts\debugInfoHelp.xnb" />
+    <Content Include="Content\fonts\footerMessage.xnb" />
+    <Content Include="Content\fonts\fps.xnb" />
+    <Content Include="Content\fonts\gameVersion.xnb" />
+    <Content Include="Content\fonts\instructionLabel.xnb" />
+    <Content Include="Content\fonts\main-font-big.xnb" />
+    <Content Include="Content\fonts\main-font-medium-2.xnb" />
+    <Content Include="Content\fonts\main-font-medium.xnb" />
+    <Content Include="Content\fonts\main-font-small.xnb" />
+    <Content Include="Content\fonts\notebook-medium.xnb" />
+    <Content Include="Content\fonts\notebook.xnb" />
+    <Content Include="Content\fonts\objectsId.xnb" />
+    <Content Include="Content\fonts\snail-counter-ThemeA.xnb" />
+    <Content Include="Content\fonts\snail-counter-ThemeB.xnb" />
+    <Content Include="Content\fonts\snail-counter-ThemeC.xnb" />
+    <Content Include="Content\fonts\snail-counter-ThemeD.xnb" />
+    <Content Include="Content\fonts\snails-switch.xnb" />
+    <Content Include="Content\screens\ScreensData.xnb" />
+    <Content Include="Content\tutorials\tutorial.xnb" />
+    <Content Include="Content\stages\levels.xnb" />
+    <Content Include="Content\stages\stagedata.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_01.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_02.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_03.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_04.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_05.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_06.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_07.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_08.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_09.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_10.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_11.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_12.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_13.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_14.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_15.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_16.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_17.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_18.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_19.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_20.xnb" />
+    <Content Include="Content\stages\ThemeD\ThemeD_21.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_01.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_02.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_03.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_04.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_05.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_06.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_07.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_08.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_09.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_10.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_11.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_12.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_13.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_14.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_15.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_16.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_17.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_18.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_19.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_20.xnb" />
+    <Content Include="Content\stages\ThemeC\ThemeC_21.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_01.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_02.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_03.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_04.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_05.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_06.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_07.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_08.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_09.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_10.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_11.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_12.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_13.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_14.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_15.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_16.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_17.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_18.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_19.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_20.xnb" />
+    <Content Include="Content\stages\ThemeB\ThemeB_21.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_01.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_02.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_03.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_04.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_05.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_06.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_07.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_08.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_09.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_10.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_11.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_12.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_13.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_14.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_15.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_16.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_17.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_18.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_19.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_20.xnb" />
+    <Content Include="Content\stages\ThemeA\ThemeA_21.xnb" />
+    <Content Include="Content\spriteset\ThemeA\back-layer1.xnb" />
+    <Content Include="Content\spriteset\ThemeA\back-layer2.xnb" />
+    <Content Include="Content\spriteset\ThemeA\back-layer3.xnb" />
+    <Content Include="Content\spriteset\ThemeA\back-layer4.xnb" />
+    <Content Include="Content\spriteset\ThemeA\objects.xnb" />
+    <Content Include="Content\spriteset\ThemeA\tiles-fragments.xnb" />
+    <Content Include="Content\spriteset\ThemeA\tiles.xnb" />
+    <Content Include="Content\spriteset\ThemeB\back-layer1.xnb" />
+    <Content Include="Content\spriteset\ThemeB\back-layer2.xnb" />
+    <Content Include="Content\spriteset\ThemeB\back-layer3.xnb" />
+    <Content Include="Content\spriteset\ThemeB\back-layer4.xnb" />
+    <Content Include="Content\spriteset\ThemeB\objects.xnb" />
+    <Content Include="Content\spriteset\ThemeB\tiles-fragments.xnb" />
+    <Content Include="Content\spriteset\ThemeB\tiles.xnb" />
+    <Content Include="Content\spriteset\ThemeC\back-layer1.xnb" />
+    <Content Include="Content\spriteset\ThemeC\back-layer2.xnb" />
+    <Content Include="Content\spriteset\ThemeC\objects.xnb" />
+    <Content Include="Content\spriteset\ThemeC\tiles-fragments.xnb" />
+    <Content Include="Content\spriteset\ThemeC\tiles.xnb" />
+    <Content Include="Content\spriteset\ThemeD\back-layer1.xnb" />
+    <Content Include="Content\spriteset\ThemeD\objects.xnb" />
+    <Content Include="Content\spriteset\ThemeD\tiles-fragments.xnb" />
+    <Content Include="Content\spriteset\ThemeD\tiles.xnb" />
+    <Content Include="Content\spriteset\anim-snails.xnb" />
+    <Content Include="Content\spriteset\boards.xnb" />
+    <Content Include="Content\spriteset\brains-logo.xnb" />
+    <Content Include="Content\spriteset\common-tiles.xnb" />
+    <Content Include="Content\spriteset\controller-buttons.xnb" />
+    <Content Include="Content\spriteset\intro2-1.xnb" />
+    <Content Include="Content\spriteset\intro2-2.xnb" />
+    <Content Include="Content\spriteset\lamp.xnb" />
+    <Content Include="Content\spriteset\leaf.xnb" />
+    <Content Include="Content\spriteset\light-masks.xnb" />
+    <Content Include="Content\spriteset\light-tints.xnb" />
+    <Content Include="Content\spriteset\main-menu-objects2.xnb" />
+    <Content Include="Content\spriteset\menus-background.xnb" />
+    <Content Include="Content\spriteset\pickable-objects.xnb" />
+    <Content Include="Content\spriteset\player-cursor.xnb" />
+    <Content Include="Content\spriteset\pop-up-boxes.xnb" />
+    <Content Include="Content\spriteset\simple-switch.xnb" />
+    <Content Include="Content\spriteset\snail-helmet.xnb" />
+    <Content Include="Content\spriteset\snail-king.xnb" />
+    <Content Include="Content\spriteset\snail-rocket.xnb" />
+    <Content Include="Content\spriteset\snails-switch.xnb" />
+    <Content Include="Content\spriteset\stage-objects.xnb" />
+    <Content Include="Content\spriteset\StageHUD.xnb" />
+    <Content Include="Content\spriteset\tools.xnb" />
+    <Content Include="Content\spriteset\Trampoline.xnb" />
+    <Content Include="Content\spriteset\tutorial_with_images.xnb" />
+    <Content Include="Content\musics\egypt-theme-song.mp3" />
+    <Content Include="Content\musics\garden-theme-song.mp3" />
+    <Content Include="Content\musics\snail-menu-theme.mp3" />
+    <Content Include="Content\game-settings.xnb" />
+    <Content Include="Content\screens\Credits.xnb" />
+    <Content Include="Content\screens\HowToPlay.xnb" />
+    <Content Include="Content\screens\InGameOptions.xnb" />
+    <Content Include="Content\screens\MainMenu.xnb" />
+    <Content Include="Content\screens\MissionFailed.xnb" />
+    <Content Include="Content\screens\Options.xnb" />
+    <Content Include="Content\screens\StageCompleted.xnb" />
+    <Content Include="Content\screens\StageStart.xnb" />
+    <Content Include="Content\screens\ThemeUnlocked.xnb" />
+    <Content Include="Content\screens\controls\UIFooterMessage.xnb" />
+    <Content Include="Content\screens\controls\UIIntroPicture.xnb" />
+    <Content Include="Content\screens\controls\UIMainMenuBodyPanel.xnb" />
+    <Content Include="Content\screens\controls\UISnailsButton.xnb" />
+    <Content Include="Content\screens\controls\UISnailsMenu.xnb" />
+    <Content Include="Content\screens\controls\UISnailsWindow.xnb" />
+    <Content Include="Content\screens\controls\UIStage.xnb" />
+    <Content Include="Content\screens\controls\UIStageInfo.xnb" />
+    <Content Include="Content\screens\controls\UITheme.xnb" />
+    <Content Include="Content\screens\controls\UIThemesPanel.xnb" />
+    <Content Include="Content\spriteset\dynamite.xnb" />
+    <Content Include="Content\spriteset\ThemeA\props.xnb" />
+    <Content Include="Content\spriteset\ThemeB\props.xnb" />
+    <Content Include="Content\spriteset\signs.xnb" />
+    <Content Include="Content\spriteset\snail-props.xnb" />
+    <Content Include="Content\screens\Gameplay.xnb" />
+    <Content Include="Content\sfx\incomming_end.xnb" />
+    <Content Include="Content\sfx\incomming_start.xnb" />
+    <Content Include="Content\sfx\leafs-close.xnb" />
+    <Content Include="Content\sfx\leafs-open.xnb" />
+    <Content Include="Content\sfx\medal-hitting-board.xnb" />
+    <Content Include="Content\sfx\menu-closed.xnb" />
+    <Content Include="Content\sfx\menu-item-focus.xnb" />
+    <Content Include="Content\sfx\menu-item-selected.xnb" />
+    <Content Include="Content\sfx\menu-item-shown.xnb" />
+    <Content Include="Content\sfx\mission_failed.xnb" />
+    <Content Include="Content\sfx\point-increment.xnb" />
+    <Content Include="Content\sfx\slider-move.xnb" />
+    <Content Include="Content\sfx\text-blink.xnb" />
+    <Content Include="Content\sfx\time-up.xnb" />
+    <Content Include="Content\sfx\timer-tick.xnb" />
+    <Content Include="Content\sfx\tool_invalid.xnb" />
+    <Content Include="Content\sfx\tool_selection.xnb" />
+    <Content Include="Content\images\anim-snails.xnb" />nt\images\boards.xnb"/&gt;
+      
+    
+    <Content Include="Content\images\fonts-1.xnb" /><Content Include="Content\images\intro2-1.xnb" /><Content Include="Content\images\intro2-2.xnb" /><Content Include="Content\images\leaf.xnb" /><Content Include="Content\images\menu-elements-1.xnb" /><Content Include="Content\images\menus-background.xnb" /><Content Include="Content\images\stage-objects-2.xnb" /><Content Include="Content\images\stage-objects.xnb" /><Content Include="Content\images\tutorial.xnb" /><Content Include="Content\images\ThemeA\back-layer1.xnb" /><Content Include="Content\images\ThemeA\back-layer2.xnb" /><Content Include="Content\images\ThemeA\back-layer3.xnb" /><Content Include="Content\images\ThemeA\back-layer4.xnb" /><Content Include="Content\images\ThemeA\tiles.xnb" /><Content Include="Content\images\ThemeB\back-layer1.xnb" /><Content Include="Content\images\ThemeB\back-layer2.xnb" /><Content Include="Content\images\ThemeB\back-layer3.xnb" /><Content Include="Content\images\ThemeB\back-layer4.xnb" /><Content Include="Content\images\ThemeB\back-layer5.xnb" /><Content Include="Content\images\ThemeB\tiles.xnb" /><Content Include="Content\images\ThemeC\back-layer1.xnb" /><Content Include="Content\images\ThemeC\back-layer2.xnb" /><Content Include="Content\images\ThemeC\tiles.xnb" /><Content Include="Content\images\ThemeD\back-layer1.xnb" /><Content Include="Content\images\ThemeD\tiles.xnb" /><Content Include="Content\images\ThemeC\moon.xnb" /><Content Include="Content\spriteset\ThemeB\back-layer5.xnb" /><Content Include="Content\spriteset\fade-in-out-box.xnb" /><Content Include="Content\spriteset\water.xnb" /><Content Include="Content\spriteset\crystal.xnb" /><Content Include="Content\spriteset\laser-beam.xnb" /><Content Include="Content\achievements.xnb" /><Content Include="Content\sfx\Objects\apple_bite.xnb" /><Content Include="Content\sfx\Objects\box-drop.xnb" /><Content Include="Content\sfx\Objects\bubble-pop.xnb" /><Content Include="Content\sfx\Objects\C4-beep.xnb" /><Content Include="Content\sfx\Objects\coin_found.xnb" /></ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Mono\MonoMac\v0.0\Mono.MonoMac.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\BrainEngine\BrainEngineMac.csproj">
+      <Project>{AAF58361-CB2C-4831-A6CF-E9F9AFAD3965}</Project>
+      <Name>BrainEngineMac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SnailsEngine\SnailsEngineMac.csproj">
+      <Project>{240346D7-3FA4-4395-B9A6-2DE74F2C4247}</Project>
+      <Name>SnailsEngineMac</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMain.cs" />
+  </ItemGroup>
+</Project>

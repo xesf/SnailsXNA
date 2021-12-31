@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{E7B80B44-5DAF-41F1-937F-1B1D9325406F}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwoBrainsGames.BrainEngine</RootNamespace>
+    <AssemblyName>TwoBrainsGames.BrainEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaCrossPlatformGroupID>2661D2C2-2171-47c6-A889-D8D5CD31AD1E</XnaCrossPlatformGroupID>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <XnaUpgrade>
+    </XnaUpgrade>
+    <XnaOutputType>Library</XnaOutputType>
+    <XnaProfile>HiDef</XnaProfile>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/GameEngine/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;XBOX;XBOX360;XNA4</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>XBOX;XBOX360;XNA4</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug Demo|Xbox 360'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Xbox 360\Debug Demo\</OutputPath>
+    <DefineConstants>DEBUG;XBOX;XBOX360;DEMO</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Xbox 360\Debug\TwoBrainsGames.BrainEngine.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug Beta|Xbox 360'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Xbox 360\Debug Beta\</OutputPath>
+    <DefineConstants>DEBUG;XBOX;XBOX360;XNA4;BETA</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Xbox 360\Debug\TwoBrainsGames.BrainEngine.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <XnaCompressContent>True</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Beta|Xbox 360'">
+    <OutputPath>bin\Xbox 360\Release Beta\</OutputPath>
+    <DefineConstants>XBOX;XBOX360;XNA4;BETA</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Xbox 360\Release\TwoBrainsGames.BrainEngine.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Audio\MusicManager.cs" />
+    <Compile Include="Audio\SampleManager.cs" />
+    <Compile Include="BrainException.cs" />
+    <Compile Include="BrainGame.cs" />
+    <Compile Include="BrainGameTime.cs" />
+    <Compile Include="BrainHelper.cs" />
+    <Compile Include="Collision\BoundingCircle.cs" />
+    <Compile Include="Collision\BoundingSquare.cs" />
+    <Compile Include="Collision\ICollidable.cs" />
+    <Compile Include="Data\Content\GenericContentReader.cs" />
+    <Compile Include="Data\Content\SpriteSetReader.cs" />
+    <Compile Include="Data\Content\TextFontReader.cs" />
+    <Compile Include="Data\Content\XDFReader.cs" />
+    <Compile Include="Data\DataFiles\BinaryDataFile\BinaryDataFile.cs" />
+    <Compile Include="Data\DataFiles\BinaryDataFile\BinaryDataFileReader.cs" />
+    <Compile Include="Data\DataFiles\BinaryDataFile\BinaryDataFileWriter.cs" />
+    <Compile Include="Data\DataFiles\DataFile.cs" />
+    <Compile Include="Data\DataFiles\DataFileField.cs" />
+    <Compile Include="Data\DataFiles\DataFileFormatException.cs" />
+    <Compile Include="Data\DataFiles\DataFileRecord.cs" />
+    <Compile Include="Data\DataFiles\DataFileRecordList.cs" />
+    <Compile Include="Data\DataFiles\FlagsType.cs" />
+    <Compile Include="Data\DataFiles\IDataFileReader.cs" />
+    <Compile Include="Data\DataFiles\IDataFileSerializable.cs" />
+    <Compile Include="Data\DataFiles\IDataFileWriter.cs" />
+    <Compile Include="Data\DataFiles\PathManager.cs" />
+    <Compile Include="Debugging\AssertionException.cs" />
+    <Compile Include="Debugging\BETrace.cs" />
+    <Compile Include="Debugging\DebugInfo.cs" />
+    <Compile Include="Debugging\DebugItem.cs" />
+    <Compile Include="Debugging\FPSCounter.cs" />
+    <Compile Include="Debugging\PerformanceCounter.cs" />
+    <Compile Include="Debugging\TimerCounter.cs" />
+    <Compile Include="Effects\BlinkEffect.cs" />
+    <Compile Include="Effects\ColorEffect.cs" />
+    <Compile Include="Effects\Shades\WaterShadeEffect.cs" />
+    <Compile Include="Effects\TransformEffects\FloatingEffect.cs" />
+    <Compile Include="Effects\TransformEffects\HooverEffect.cs" />
+    <Compile Include="Effects\TransformEffects\MotionEffect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Effects\TransformEffects\PathFollowEffect.cs" />
+    <Compile Include="Effects\TransformEffects\ScaleEffect.cs" />
+    <Compile Include="Effects\TransformEffects\SquashEffect.cs" />
+    <Compile Include="GameExtensions.cs" />
+    <Compile Include="Graphics\BackgroundLayer.cs" />
+    <Compile Include="Graphics\Camera2D.cs" />
+    <Compile Include="Graphics\RenderMask.cs" />
+    <Compile Include="Graphics\SpriteAnimation.cs" />
+    <Compile Include="Graphics\SpriteAnimationQueue.cs" />
+    <Compile Include="Graphics\SpriteAnimationQueueItem.cs" />
+    <Compile Include="IHddIndicator.cs" />
+    <Compile Include="IBrainComponent.cs" />
+    <Compile Include="Input\ControllerRumble.cs" />
+    <Compile Include="Effects\TransformEffects\LinearMoveEffect.cs" />
+    <Compile Include="Effects\TransformEffects\RotationEffect.cs" />
+    <Compile Include="Effects\TransformBlender.cs" />
+    <Compile Include="Input\ControllerInput.cs" />
+    <Compile Include="Effects\ITransformEffect.cs" />
+    <Compile Include="Effects\TransformEffectBase.cs" />
+    <Compile Include="Effects\TransformEffects\GravityEffect.cs" />
+    <Compile Include="Effects\TransformEffects\ShakeEffect.cs" />
+    <Compile Include="Effects\ParticlesEffects\ExplosionEffect.cs" />
+    <Compile Include="Effects\ParticlesEffect.cs" />
+    <Compile Include="Input\GamePadInput.cs" />
+    <Compile Include="Input\InputBase.cs" />
+    <Compile Include="Input\InputRecorder.cs" />
+    <Compile Include="Input\InputRecorderStream.cs" />
+    <Compile Include="Input\KeyboardInput.cs" />
+    <Compile Include="Input\MouseInput.cs" />
+    <Compile Include="Input\TouchInput.cs" />
+    <Compile Include="Localization\LanguageManager.cs" />
+    <Compile Include="Mathematics.cs" />
+    <Compile Include="Parsers.cs" />
+    <Compile Include="Resources\Music.cs" />
+    <Compile Include="Resources\Sample.cs" />
+    <Compile Include="Resources\ResourceManager.cs" />
+    <Compile Include="Resources\TextFont.cs" />
+    <Compile Include="Graphics\Frame.cs" />
+    <Compile Include="Graphics\ICamera2D.cs" />
+    <Compile Include="Input\KeyboardMapping.cs" />
+    <Compile Include="Graphics\LineBatch.cs" />
+    <Compile Include="Collision\OOBoundingBox.cs" />
+    <Compile Include="Resources\Image.cs" />
+    <Compile Include="Graphics\Object2D.cs" />
+    <Compile Include="Resources\SpriteSet.cs" />
+    <Compile Include="Resources\TextFontChar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resource.cs" />
+    <Compile Include="Graphics\Sprite.cs" />
+    <Compile Include="BrainSettings.cs" />
+    <Compile Include="SpacePartitioning\IQuadtreeContainable.cs" />
+    <Compile Include="SpacePartitioning\Quadtree.cs" />
+    <Compile Include="SpacePartitioning\QuadtreeNode.cs" />
+    <Compile Include="UI\Controls\UIButton.cs" />
+    <Compile Include="UI\Controls\UIControl.cs" />
+    <Compile Include="UI\Controls\ControlCollection.cs" />
+    <Compile Include="UI\Controls\ContainerControl.cs" />
+    <Compile Include="UI\Controls\UIImage.cs" />
+    <Compile Include="UI\Controls\UILabel.cs" />
+    <Compile Include="UI\Controls\UIMask.cs" />
+    <Compile Include="UI\Controls\UIMenu.cs" />
+    <Compile Include="UI\Controls\UIMenuItem.cs" />
+    <Compile Include="UI\Controls\UIMenuItemCollection.cs" />
+    <Compile Include="UI\Controls\UIPanel.cs" />
+    <Compile Include="UI\Controls\UIScrollablePanel.cs" />
+    <Compile Include="UI\Controls\UISlider.cs" />
+    <Compile Include="UI\Controls\UISpriteFontLabel.cs" />
+    <Compile Include="UI\Controls\UITextFontLabel.cs" />
+    <Compile Include="UI\Controls\UITextFontLabelInput.cs" />
+    <Compile Include="UI\Controls\UITimer.cs" />
+    <Compile Include="UI\Cursor.cs" />
+    <Compile Include="Localization\LanguageCode.cs" />
+    <Compile Include="UI\Screens\Effects\GaussianBlur.cs" />
+    <Compile Include="UI\Screens\Effects\GaussianBlurGray.cs" />
+    <Compile Include="UI\Screens\Effects\PostProcessor.cs" />
+    <Compile Include="UI\Screens\Screen.cs" />
+    <Compile Include="UI\Screens\ScreenGlobalCache.cs" />
+    <Compile Include="UI\Screens\ScreenNavigator.cs" />
+    <Compile Include="UI\Screens\ScreensData.cs" />
+    <Compile Include="UI\Screens\Transitions\BlurTransition.cs" />
+    <Compile Include="UI\Screens\Transitions\FadeInTransition.cs" />
+    <Compile Include="UI\Screens\Transitions\FadeOutTransition.cs" />
+    <Compile Include="UI\Screens\Transitions\GrayoutTransition.cs" />
+    <Compile Include="UI\Screens\Transitions\Transition.cs" />
+    <Compile Include="UI\Screens\UIScreen.cs" />
+    <Compile Include="UI\SoftwareCursor.cs" />
+    <Compile Include="UI\Types.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.3.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

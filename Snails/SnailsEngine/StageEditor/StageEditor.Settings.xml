@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StageEditor.Settings >
+  <TilesToolbox>
+    <!-- Especificar o stageDataGroupId 
+         Desta forma a toolbox quando carregar vai buscar o tile do group id que tem caminhos nos 4 lados 
+         props:
+            thumbnail - Imagem a usar na toolbox, opcional, se não específicado usa o que estiver no stageData
+            onBoardPlacement - método a chamar quando o tile for colocado no board (para fazer operações custom)-->
+    <Item stageDataGroupId="0" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.TileToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="TilesThumbnails\tile-%THEME%-sg0.png"/>"<!-- Tiles destrutíveis -->
+    <Item stageDataGroupId="1" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.TileToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="TilesThumbnails\tile-%THEME%-sg1.png"/>  <!-- Tiles indestrutíveis -->
+    <Item stageDataGroupId="2" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.TileToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="TilesThumbnails\tile-sg2.png"/>  <!-- Cobre -->
+    <Item stageDataGroupId="3" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.TileToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="TilesThumbnails\tile-sg3.png"/>  <!-- Caixotes -->
+    <Item stageDataGroupId="7" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.TileToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="TilesThumbnails\tile-directional-box-cw.png"/>  <!-- Caixotes -->
+    <Item stageDataGroupId="8" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.TileToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="TilesThumbnails\tile-directional-box-ccw.png"/>  <!-- Caixotes -->
+  </TilesToolbox>
+
+  <ObjectToolbox>
+    <Item stageDataObjId="STAGE_ENTRANCE" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-%THEME%-entrance.png">
+        <ObjectBehaviour>
+        <PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageEntrancePropsForm"/>
+        <PropertiesToShow>
+          <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+          <Property name="SnailsToRelease" formatText="Snails: {0}"/>
+          <Property name="IntervalToRelease" formatText="Interval: {0}"/>
+        </PropertiesToShow>
+      </ObjectBehaviour>
+    </Item>
+
+    <Item stageDataObjId="STAGE_EXIT" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-%THEME%-exit.png">
+        <ObjectBehaviour>
+        <PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageExitPropsForm"/>
+        <PropertiesToShow>
+          <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+        </PropertiesToShow>
+      </ObjectBehaviour>
+    </Item>
+
+    <Item stageDataObjId="SNAIL_COUNTER" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem"  thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-%THEME%-counter.png">
+      <ObjectBehaviour tilePlacementX="Arbitrary">
+        <PropertiesToShow>
+          <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+        </PropertiesToShow>
+      </ObjectBehaviour>
+    </Item>
+
+    <Item stageDataObjId="PICKABLE_OBJECT" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-pickup.png">
+      <ObjectBehaviour tilePlacementX="Center"  tilePlacementY="Center" openPropertiesWhenAdded="false">
+        <ItemSelectForm formClass="TwoBrainsGames.Snails.StageEditor.Forms.PickableSelectForm"/>
+        <PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.PickablePropsForm"/>
+          <PropertiesToShow>
+              <Property name="Quantity" formatText="Quantity: {0}" showWhenUnselected="true"/>
+          </PropertiesToShow>
+      </ObjectBehaviour>
+    </Item>
+
+    <Item stageDataObjId="TRAMPOLINE"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-trampoline.png">
+      <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Bottom" offsetY="1"/>
+    </Item>
+
+    <Item stageDataObjId="FIRE" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-fire.png">
+      <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Bottom"/>
+    </Item>
+
+    <Item stageDataObjId="SPIKES"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-spikes.png">
+      <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Bottom" allowRotation="true">
+        <PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.SpikePropsForm"/>
+        <PropertiesToShow>
+          <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+          <Property name="ActivationTime" formatText="Activation: {0} ms"/>
+          <Property name="StartupDelay" formatText="Delay: {0} ms"/>
+        </PropertiesToShow>
+      </ObjectBehaviour>
+    </Item>
+      
+    <Item stageDataObjId="DYNAMITE_BOX_TRIGGERED" thumbnailType1="Sprite" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-dynamite-triggered-box.png">
+    </Item>
+
+    <Item stageDataObjId="DYNAMITE_BOX_COUNTED" thumbnailType1="Sprite" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-dynamite-counted-box.png">
+      <ObjectBehaviour  tilePlacementX="Center" tilePlacementY="Center" openPropertiesWhenAdded="false">
+        <PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.DynamiteBoxCountedForm"/>
+        <PropertiesToShow>
+          <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+          <Property name="SnailsAllowed" formatText="Snails: {0}" showWhenUnselected="true"/>
+        </PropertiesToShow>
+      </ObjectBehaviour>
+    </Item>
+
+    <Item stageDataObjId="FADE_IN_OUT_BOX" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem"  thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-fade-box.png">
+        <ObjectBehaviour  tilePlacementX="Center" tilePlacementY="Center" openPropertiesWhenAdded="false">
+            <PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.FadeInOutBoxPropsForm"/>
+            <PropertiesToShow>
+                <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+            </PropertiesToShow>
+        </ObjectBehaviour>
+    </Item>
+
+    <Item stageDataObjId="APPLE"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-apple.png">
+      <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Bottom" offsetY="-5"/>
+    </Item>
+      
+    <Item stageDataObjId="SALT"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-salt.png">
+        <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Bottom" allowRotation="true" offsetY="5"/>
+    </Item>
+
+      <Item stageDataObjId="C4"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem"  thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-c4.png">
+          <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Center">
+              <PropertiesToShow>
+                  <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+      </Item>
+      
+      <Item stageDataObjId="CONTROLLABLE_LASER_CANNON"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem"  thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-laser-cannon.png">
+          <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Bottom" allowRotation="true">
+              <PropertiesForm showSpriteEffect="true" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.ControllableLaserCannonForm"/>
+              <PropertiesToShow>
+                  <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+      </Item>
+
+      <Item stageDataObjId="FIXED_LASER_CANNON"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem"  thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-fixed-laser-cannon.png">
+          <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Bottom" allowRotation="true">
+              <PropertiesForm formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.LaserCannonBasePropsForm"/>
+              <PropertiesToShow>
+                  <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+      </Item>
+      <Item stageDataObjId="LASER_BEAM_MIRROR"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem"  thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-laser-mirror.png">
+          <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Bottom" allowRotation="true">
+              <PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.LaserBeamMirrorPropsForm"/>
+              <PropertiesToShow>
+                  <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+      </Item>
+
+      <Item stageDataObjId="LASER_BEAM_SWITCH"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem"  thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-laser-switch.png">
+          <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Bottom" allowRotation="true">
+              <PropertiesForm showSpriteEffect="false" showLinks="true" linksTypeFilter="TwoBrainsGames.Snails.StageObjects.ISwitchable" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.LaserSwitchPropsForm"/>
+              <PropertiesToShow>
+                  <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+      </Item>
+
+      <Item stageDataObjId="TRIGGER_SWITCH"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-simple-switch.png">
+          <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Bottom" allowRotation="true">
+              <PropertiesForm showSpriteEffect="true" showLinks="true" linksTypeFilter="TwoBrainsGames.Snails.StageObjects.ISwitchable" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.SimpleSwitchPropsForm"/>
+              <PropertiesToShow>
+                  <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+      </Item>
+
+      <Item stageDataObjId="SNAIL_SACRIFICE"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-snail-switch.png">
+          <ObjectBehaviour tilePlacementY="Bottom" offsetY="2">
+            <PropertiesForm showSpriteEffect="false" showLinks="true" linksTypeFilter="TwoBrainsGames.Snails.StageObjects.ISwitchable" formClass="TwoBrainsGames.Snails.StageEditor.Forms.SnailSacrificeSwitchPropsForm"/>
+            <PropertiesToShow>
+              <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+              <Property name="SnailsToSacrifice" formatText="Snails needed: {0}"/>
+            </PropertiesToShow>
+          </ObjectBehaviour>
+    </Item>
+
+    <Item stageDataObjId="POP_UP_BOX"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-popup-box.png">
+      <ObjectBehaviour tilePlacementX="Center"  tilePlacementY="Center" openPropertiesWhenAdded="false">
+        <PropertiesForm showSpriteEffect="false" showLinks="true" linksTypeFilter="TwoBrainsGames.Snails.StageObjects.ISwitchable" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.PopUpBoxPropsForm"/>
+        <PropertiesToShow>
+          <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+        </PropertiesToShow>
+      </ObjectBehaviour>
+    </Item>
+
+      <Item stageDataObjId="STAGE_PROP" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem"  thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-%THEME%-prop.png">
+          <ObjectBehaviour tilePlacementX="Arbitrary" tilePlacementY="Arbitrary" showSelectionRect="false" allowOutOfTheBoard="true"  openPropertiesWhenAdded="false">
+              <!-- This defines a form to show when the item is selected-->
+              <ItemSelectForm formClass="TwoBrainsGames.Snails.StageEditor.Forms.StagePropSelectForm"/>
+              <PropertiesForm showSpriteEffect="true" showRotation="true" showLinks="false" linksTypeFilter="TwoBrainsGames.Snails.StageObjects.ISwitchable" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.StagePropPropsForm"/>
+          </ObjectBehaviour>
+      </Item>
+
+
+      <Item stageDataObjId="INFORMATION_SIGN" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-sign.png">
+          <ObjectBehaviour tilePlacementX="Arbitrary" tilePlacementY="Bottom">
+              <!-- This defines a form to show when the item is selected-->
+              <ItemSelectForm formClass="TwoBrainsGames.Snails.StageEditor.Forms.InformationSignSelectForm"/>
+              <PropertiesToShow offsetx="0" offsety="-15">
+                  <Property name="SignId" formatText="{0}" showWhenUnselected="true"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+          <Signs>
+                  <Sign signId="EXIT" thumbnailResId="SignsThumbnails\sign-exit.png"/>
+                  <Sign signId="DANGER" thumbnailResId="SignsThumbnails\sign-danger.png"/>
+                  <Sign signId="LASER" thumbnailResId="SignsThumbnails\sign-laser.png"/>
+          </Signs>
+       </Item>
+      
+      <Item stageDataObjId="TUTORIAL_SIGN" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-tutorial-sign.png">
+          <ObjectBehaviour tilePlacementX="Arbitrary" tilePlacementY="Bottom">
+              <PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.TutorialSignPropsForm"/>
+              <PropertiesToShow offsetx="0" offsety="-15">
+                  <Property name="TopicsString" formatText="Topic: {0}" showWhenUnselected="true"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+      </Item>
+
+      <Item stageDataObjId="WATER" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem"  thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-water.png">
+		<ObjectBehaviour>
+		<PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.WaterPropsForm"/>
+		<PropertiesToShow>
+			<Property name="Size" formatText="Size: {0}" showWhenUnselected="false"/>
+		</PropertiesToShow>
+		</ObjectBehaviour>
+	</Item>
+
+      <Item stageDataObjId="ACID" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem"  thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-acid.png">
+          <ObjectBehaviour>
+              <PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.WaterPropsForm"/>
+              <PropertiesToShow>
+                  <Property name="Size" formatText="Size: {0}" showWhenUnselected="false"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+      </Item>
+   <!--
+      <Item stageDataObjId="LAVA" visible="false" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem"  thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-lava.png">
+          <ObjectBehaviour>
+              <PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.WaterPropsForm"/>
+              <PropertiesToShow>
+                  <Property name="Size" formatText="Size: {0}" showWhenUnselected="false"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+      </Item>
+ 
+    <Item stageDataObjId="CRYSTAL"  itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" validTheme="ThemeD" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-crystal.png">
+      <ObjectBehaviour>
+        <PropertiesForm showSpriteEffect="false" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.CrystalPropsForm"/>
+        <PropertiesToShow>
+          <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+        </PropertiesToShow>
+      </ObjectBehaviour>
+    </Item>
+-->
+      <Item stageDataObjId="CANDLE_HOLDER" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" validTheme="ThemeB" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-candle-holder.png">
+          <ObjectBehaviour tilePlacementX="Arbitrary" tilePlacementY="Bottom">
+          </ObjectBehaviour>
+      </Item>
+
+      <Item stageDataObjId="LAMP" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" validTheme="ThemeD" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-lamp.png">
+          <ObjectBehaviour tilePlacementX="Arbitrary" tilePlacementY="Top" openPropertiesWhenAdded="false">
+              <PropertiesForm showSpriteEffect="true" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.LampPropsForm"/>
+              <PropertiesToShow>
+                  <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+      </Item>
+
+      <Item stageDataObjId="STREET_LAMP" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" validTheme="ThemeC" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-street-lamp.png">
+          <ObjectBehaviour tilePlacementX="Arbitrary" tilePlacementY="Arbitrary" openPropertiesWhenAdded="false">
+              <PropertiesForm showSpriteEffect="true" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.LampPropsForm"/>
+              <PropertiesToShow>
+                  <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+              </PropertiesToShow>
+          </ObjectBehaviour>
+      </Item>
+      
+	  <Item stageDataObjId="LIQUID_PUMP" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-liquid-pump.png">
+		  <ObjectBehaviour tilePlacementY="Bottom">
+			  <PropertiesForm showLinks="true" linksTypeFilter="TwoBrainsGames.Snails.StageObjects.Liquid" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.LiquidPumpPropsForm"/>
+			  <PropertiesToShow>
+				  <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+			  </PropertiesToShow>
+		  </ObjectBehaviour>
+	  </Item>
+	  
+	  <Item stageDataObjId="LIQUID_TAP" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-liquid-tap.png">
+		  <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Bottom">
+			  <PropertiesForm showLinks="true" linksTypeFilter="TwoBrainsGames.Snails.StageObjects.Liquid" formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.LiquidTapPropsForm"/>
+			  <PropertiesToShow>
+				  <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+			  </PropertiesToShow>
+		  </ObjectBehaviour>
+	  </Item>
+	  
+	  <Item stageDataObjId="LIQUID_PIPE" itemClass="TwoBrainsGames.Snails.StageEditor.ToolboxItems.ObjectToolboxItem" thumbnailType="EmbeddedResource" thumbnailResId="ToolsThumbnails\obj-liquid-pipe.png">
+		  <ObjectBehaviour tilePlacementX="Center" tilePlacementY="Center">
+			  <PropertiesForm formClass="TwoBrainsGames.Snails.StageEditor.Forms.StageObjectProps.LiquidPipePropsForm"/>
+			  <PropertiesToShow>
+				  <Property name="UniqueId" formatText="Id: {0}" showWhenUnselected="true"/>
+			  </PropertiesToShow>
+		  </ObjectBehaviour>
+	  </Item>
+  </ObjectToolbox>
+    
+  <!-- Theme specific settings-->
+  <Themes>
+    <Theme type="ThemeA">
+      <Settings gridColor="{R:0 G:0 B:0 A:255}"/>
+      <DefaultLayers>
+        <Layer id="GARDEN_MONTAINS"/>
+        <Layer id="GARDEN_FAR_TREES"/>
+        <Layer id="GARDEN_NEAR_TREES"/>
+        <Layer id="CLOUDS_1"/>
+        <Layer id="CLOUDS_2"/>
+        <Layer id="CLOUDS_3"/>
+      </DefaultLayers>
+    </Theme>
+    <Theme type="ThemeB">
+        <Settings gridColor="{R:0 G:0 B:0 A:255}"/>
+      <DefaultLayers>
+        <Layer id="EGYPT_FAR_DUNES"/>
+        <Layer id="EGYPT_FAR_TREES"/>
+        <Layer id="EGYPT_NEAR_TREES"/>
+        <Layer id="EGYPT_SUN"/>
+      </DefaultLayers>
+    </Theme>
+    <Theme type="ThemeC">
+        <Settings gridColor="{R:130 G:130 B:130 A:255}"/>
+        <DefaultLayers>
+            <Layer id="GRAVEYARD_FAR"/>
+            <Layer id="GRAVEYARD_FAR_TREES"/>
+            <Layer id="GRAVEYARD_MOON"/>
+            <Layer id="GRAVEYARD_FOG_1"/>
+            <Layer id="GRAVEYARD_FOG_2"/>
+            <Layer id="GRAVEYARD_FOG_3"/>
+        </DefaultLayers>
+    </Theme>
+      <Theme type="ThemeD">
+          <Settings gridColor="{R:130 G:130 B:130 A:255}"/>
+          <DefaultLayers>
+              <Layer id="GOLDMINE_FAR"/>
+          </DefaultLayers>
+      </Theme>
+  </Themes>
+
+</StageEditor.Settings>

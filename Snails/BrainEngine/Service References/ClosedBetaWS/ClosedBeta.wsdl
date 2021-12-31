@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://twobrainsgames.xesf.net/snails/services/closedbeta.wsdl" name="ClosedBeta" targetNamespace="http://twobrainsgames.xesf.net/snails/services/closedbeta.wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types />
+  <message name="RegisterUserRequest">
+    <part name="email" type="xsd:string" />
+  </message>
+  <message name="RegisterUserResponse">
+    <part name="statusCode" type="xsd:int" />
+    <part name="statusMsg" type="xsd:string" />
+  </message>
+  <message name="LoginRequest">
+    <part name="time" type="xsd:string" />
+    <part name="macaddress" type="xsd:string" />
+    <part name="betakey" type="xsd:string" />
+    <part name="country" type="xsd:string" />
+    <part name="gameversion" type="xsd:string" />
+    <part name="os" type="xsd:string" />
+  </message>
+  <message name="LoginResponse">
+    <part name="statusCode" type="xsd:int" />
+    <part name="statusMsg" type="xsd:string" />
+    <part name="SID" type="xsd:string" />
+  </message>
+  <message name="RegisterLogRequest">
+    <part name="SID" type="xsd:string" />
+    <part name="time" type="xsd:string" />
+    <part name="severity" type="xsd:int" />
+    <part name="message" type="xsd:string" />
+  </message>
+  <message name="RegisterLogResponse">
+    <part name="statusCode" type="xsd:int" />
+    <part name="statusMsg" type="xsd:string" />
+  </message>
+  <message name="RegisterStageStatsRequest">
+    <part name="SID" type="xsd:string" />
+    <part name="theme" type="xsd:string" />
+    <part name="stageNumber" type="xsd:int" />
+    <part name="startAt" type="xsd:string" />
+    <part name="status" type="xsd:int" />
+    <part name="goldcoins" type="xsd:int" />
+    <part name="silvercoins" type="xsd:int" />
+    <part name="bronzecoins" type="xsd:int" />
+    <part name="score" type="xsd:int" />
+    <part name="unusedtools" type="xsd:int" />
+    <part name="time" type="xsd:string" />
+    <part name="highscore" type="xsd:boolean" />
+    <part name="medal" type="xsd:int" />
+    <part name="stageBuild" type="xsd:int" />
+  </message>
+  <message name="RegisterStageStatsResponse">
+    <part name="statusCode" type="xsd:int" />
+    <part name="statusMsg" type="xsd:string" />
+  </message>
+  <portType name="ClosedBetaPortType">
+    <operation name="RegisterUser">
+      <input message="tns:RegisterUserRequest" />
+      <output message="tns:RegisterUserResponse" />
+    </operation>
+    <operation name="Login">
+      <input message="tns:LoginRequest" />
+      <output message="tns:LoginResponse" />
+    </operation>
+    <operation name="RegisterLog">
+      <input message="tns:RegisterLogRequest" />
+      <output message="tns:RegisterLogResponse" />
+    </operation>
+    <operation name="RegisterStageStats">
+      <input message="tns:RegisterStageStatsRequest" />
+      <output message="tns:RegisterStageStatsResponse" />
+    </operation>
+  </portType>
+  <binding name="ClosedBetaBinding" type="tns:ClosedBetaPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="RegisterUser">
+      <soap:operation soapAction="registerUser" />
+      <input>
+        <soap:body use="encoded" namespace="urn:snailsgame:closedbetaservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:snailsgame:closedbetaservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <soap:operation soapAction="login" />
+      <input>
+        <soap:body use="encoded" namespace="urn:snailsgame:closedbetaservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:snailsgame:closedbetaservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="RegisterLog">
+      <soap:operation soapAction="registerLog" />
+      <input>
+        <soap:body use="encoded" namespace="urn:snailsgame:closedbetaservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:snailsgame:closedbetaservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="RegisterStageStats">
+      <soap:operation soapAction="registerStageStats" />
+      <input>
+        <soap:body use="encoded" namespace="urn:snailsgame:closedbetaservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:snailsgame:closedbetaservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ClosedBetaService">
+    <documentation>Snails Game Beta Version Login Service</documentation>
+    <port name="ClosedBetaPort" binding="tns:ClosedBetaBinding">
+      <soap:address location="http://twobrainsgames.xesf.net/snails/services/server-closedbeta.php" />
+    </port>
+  </service>
+</definitions>

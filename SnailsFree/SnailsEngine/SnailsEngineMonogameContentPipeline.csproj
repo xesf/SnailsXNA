@@ -1,0 +1,1065 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{7E4BC056-E8F3-4EDB-B1E8-19280B6D6357}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwoBrainsGames.Snails</RootNamespace>
+    <AssemblyName>TwoBrainsGames.SnailsEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaCrossPlatformGroupID>b91b0a77-c794-4f08-9535-7bce4d6dcac7</XnaCrossPlatformGroupID>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <XnaUpgrade>
+    </XnaUpgrade>
+    <XnaOutputType>Library</XnaOutputType>
+    <XnaProfile>Reach</XnaProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/GameEngine/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\monogcontent\Release\</OutputPath>
+    <DefineConstants>TRACE;XNA4;WINDOWS;XMLDATAFILE_SUPPORT;FORMS_SUPPORT;MONOGAME</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>True</XnaCompressContent>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\ContentPipeline\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncProcessor.cs" />
+    <Compile Include="BrainEngineExtensions.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="ContentReaders\ScreensDataReader.cs" />
+    <Compile Include="ContentReaders\StageDataReader.cs" />
+    <Compile Include="ContentReaders\TutorialReader.cs" />
+    <Compile Include="Debuging\DebugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debuging\DebugForm.Designer.cs">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debuging\DebugInfo.cs" />
+    <Compile Include="Debuging\DebugItem.cs" />
+    <Compile Include="Debuging\DebugWindow.cs" />
+    <Compile Include="Debuging\SettingsInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Debuging\SettingsInfo.Designer.cs">
+      <DependentUpon>SettingsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debuging\TileObjectInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Debuging\TileObjectInfo.Designer.cs">
+      <DependentUpon>TileObjectInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effects\BlinkEffect.cs" />
+    <Compile Include="Effects\FloatingEffect.cs" />
+    <Compile Include="Effects\LiquidGravityEffect.cs" />
+    <Compile Include="Effects\PitchEffect.cs" />
+    <Compile Include="Effects\PopOutEffect.cs" />
+    <Compile Include="Effects\StageStartCameraZoomEffect.cs" />
+    <Compile Include="Effects\TrembleEffect.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Formater.cs" />
+    <Compile Include="IAsyncOperation.cs" />
+    <Compile Include="Input\DebugOptionsInput.cs" />
+    <Compile Include="Input\GameplayInput.cs" />
+    <Compile Include="HddAccessIcon.cs" />
+    <Compile Include="ISnailsDataFileSerializable.cs" />
+    <Compile Include="Player\Achievements.cs" />
+    <Compile Include="Player\PlayerProfile.cs" />
+    <Compile Include="Player\PlayersProfileManagerCROSS.cs" />
+    <Compile Include="Player\PlayersProfileManager.cs" />
+    <Compile Include="Player\PlayerStageStats.cs" />
+    <Compile Include="Player\PlayerStats.cs" />
+    <Compile Include="Player\Achievement.cs" />
+    <Compile Include="Screens\AwardsScreen.cs" />
+    <Compile Include="Screens\BrainsLogoScreen.cs" />
+    <Compile Include="Screens\AutoSaveScreen.cs" />
+    <Compile Include="Screens\CommonControls\UIAchievement.cs" />
+    <Compile Include="Screens\CommonControls\UIBackButton.cs" />
+    <Compile Include="Screens\CommonControls\UICloseButton.cs" />
+    <Compile Include="Screens\CommonControls\UIGoldMedalInfoPanel.cs" />
+    <Compile Include="Screens\CommonControls\UIArrows.cs" />
+    <Compile Include="Screens\CommonControls\UIAsync.cs" />
+    <Compile Include="Screens\CommonControls\UICaption.cs" />
+    <Compile Include="Screens\CommonControls\UICreditsButton.cs" />
+    <Compile Include="Screens\CommonControls\UICreditsPanel.cs" />
+    <Compile Include="Screens\CommonControls\UIFooterMessage.cs" />
+    <Compile Include="Screens\CommonControls\UIHowToPlayWindow.cs" />
+    <Compile Include="Screens\CommonControls\UIInstructionBar.cs" />
+    <Compile Include="Screens\CommonControls\UIInstructionLabel.cs" />
+    <Compile Include="Screens\CommonControls\UIIntroPicture.cs" />
+    <Compile Include="Screens\CommonControls\UILanguageMenu.cs" />
+    <Compile Include="Screens\CommonControls\UILoadingHint.cs" />
+    <Compile Include="Screens\CommonControls\UILocker.cs" />
+    <Compile Include="Screens\CommonControls\UIMainMenuBodyPanel.cs" />
+    <Compile Include="Screens\CommonControls\UIMiniSnailsTitle.cs" />
+    <Compile Include="Screens\CommonControls\UIPlayerStat.cs" />
+    <Compile Include="Screens\CommonControls\UISnail.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsBoard.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsButton.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMedal.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMenu.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMenuItem.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsMenuTitle.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsScrollablePanel.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsSlider.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsSliderMenuItem.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsStageGoalIcon.cs" />
+    <Compile Include="Screens\CommonControls\UISnailStamp.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsThemeIcon.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsTitle.cs" />
+    <Compile Include="Screens\CommonControls\UISnailsWindow.cs" />
+    <Compile Include="Screens\CommonControls\UISoundMenu.cs" />
+    <Compile Include="Screens\CommonControls\UIStars.cs" />
+    <Compile Include="Screens\CommonControls\UIThemeScrollablePanel.cs" />
+    <Compile Include="Screens\CommonControls\UITutorialTopic.cs" />
+    <Compile Include="Screens\CommonControls\UIValuedCaption.cs" />
+    <Compile Include="Screens\CommonControls\UIXBoxControls.cs" />
+    <Compile Include="Screens\DebugOptionsScreen.cs" />
+    <Compile Include="Screens\HintWarningScreen.cs" />
+    <Compile Include="Screens\HowToPlayScreen.cs" />
+    <Compile Include="Screens\InGameOptionsScreen.cs" />
+    <Compile Include="Screens\GameplayScreen.cs" />
+    <Compile Include="Screens\MainMenuScreen.cs" />
+    <Compile Include="Screens\MissionFailedScreen.cs" />
+    <Compile Include="Screens\NewGameScreen.cs" />
+    <Compile Include="Screens\OptionsScreen.cs" />
+    <Compile Include="Screens\OverscanScreen.cs" />
+    <Compile Include="Screens\PlayerStatsScreen.cs" />
+    <Compile Include="Screens\PurchaseScreen.cs" />
+    <Compile Include="Screens\QuitGameScreen.cs" />
+    <Compile Include="Screens\RateScreen.cs" />
+    <Compile Include="Screens\ScreenTypes.cs" />
+    <Compile Include="Screens\SnailsScreen.cs" />
+    <Compile Include="Screens\StageCompletedScreen.cs" />
+    <Compile Include="Screens\StageStartScreen.cs" />
+    <Compile Include="Screens\StartupScreen.cs" />
+    <Compile Include="Screens\ThemeSelectionLDScreen.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStageInfo.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStagesPanel.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStagesPanelLD.cs" />
+    <Compile Include="Screens\ThemeSelection\UITheme.cs" />
+    <Compile Include="Screens\ThemeSelection\ThemeSelectionScreen.cs" />
+    <Compile Include="Screens\ThemeSelection\UIStage.cs" />
+    <Compile Include="Screens\ThemeSelection\UIThemeLD.cs" />
+    <Compile Include="Screens\ThemeSelection\UIThemesPanel.cs" />
+    <Compile Include="Screens\ThemeUnlockedScreen.cs" />
+    <Compile Include="Screens\Transitions\ISnailsPauseTransition.cs" />
+    <Compile Include="Screens\Transitions\LeafTransition.cs" />
+    <Compile Include="Screens\Transitions\ScreenTransitions.cs" />
+    <Compile Include="Screens\Transitions\SnailsBlurTransition.cs" />
+    <Compile Include="Screens\Transitions\SnailsGrayoutTransition.cs" />
+    <Compile Include="Screens\XBoxHelpScreen.cs" />
+    <Compile Include="SnailsException.cs" />
+    <Compile Include="StageEditor\BoardCursor.cs" />
+    <Compile Include="StageEditor\ClassExtensions\StageObject.cs" />
+    <Compile Include="StageEditor\ClassExtensions\Tile.cs" />
+    <Compile Include="StageEditor\Controls\BaseComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\BaseComboBox.Designer.cs">
+      <DependentUpon>BaseComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\CustomStageGroupNode.cs" />
+    <Compile Include="StageEditor\Controls\CustomStageNode.cs" />
+    <Compile Include="StageEditor\Controls\EditableObjectList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\EditableObjectList.Designer.cs">
+      <DependentUpon>EditableObjectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\StageNode.cs" />
+    <Compile Include="StageEditor\Controls\ThemeNode.cs" />
+    <Compile Include="StageEditor\EditorCustomStage.cs" />
+    <Compile Include="StageEditor\Forms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\EditLayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\EditLayerForm.Designer.cs">
+      <DependentUpon>EditLayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\HintsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\HintsForm.Designer.cs">
+      <DependentUpon>HintsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\InformationSignSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\InformationSignSelectForm.Designer.cs">
+      <DependentUpon>InformationSignSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\LoadCustomStageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\LoadCustomStageForm.Designer.cs">
+      <DependentUpon>LoadCustomStageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\MoveTilesAndObjectsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\MoveTilesAndObjectsForm.Designer.cs">
+      <DependentUpon>MoveTilesAndObjectsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\NewCustomStageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\NewCustomStageForm.Designer.cs">
+      <DependentUpon>NewCustomStageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\ObjectSelectedBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\ObjectSelectedBaseForm.Designer.cs">
+      <DependentUpon>ObjectSelectedBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\PickableSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\PickableSelectForm.Designer.cs">
+      <DependentUpon>PickableSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\PreferencesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\PreferencesForm.Designer.cs">
+      <DependentUpon>PreferencesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\STADialog.cs" />
+    <Compile Include="StageEditor\Forms\StageDataEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageDataEditorForm.Designer.cs">
+      <DependentUpon>StageDataEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\ControllableLaserCannonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\ControllableLaserCannonForm.Designer.cs">
+      <DependentUpon>ControllableLaserCannonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\CrystalPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\CrystalPropsForm.Designer.cs">
+      <DependentUpon>CrystalPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\DynamiteBoxCountedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\DynamiteBoxCountedForm.Designer.cs">
+      <DependentUpon>DynamiteBoxCountedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\FadeInOutBoxPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\FadeInOutBoxPropsForm.Designer.cs">
+      <DependentUpon>FadeInOutBoxPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LampPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LampPropsForm.Designer.cs">
+      <DependentUpon>LampPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LaserBeamMirrorPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LaserBeamMirrorPropsForm.Designer.cs">
+      <DependentUpon>LaserBeamMirrorPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LaserCannonBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LaserCannonBaseForm.designer.cs">
+      <DependentUpon>LaserCannonBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LaserSwitchPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LaserSwitchPropsForm.Designer.cs">
+      <DependentUpon>LaserSwitchPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LiquidPipePropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LiquidPipePropsForm.Designer.cs">
+      <DependentUpon>LiquidPipePropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LiquidPumpPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LiquidPumpPropsForm.Designer.cs">
+      <DependentUpon>LiquidPumpPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LiquidTapPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\LiquidTapPropsForm.Designer.cs">
+      <DependentUpon>LiquidTapPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\ObjectPropsBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\ObjectPropsBaseForm.designer.cs">
+      <DependentUpon>ObjectPropsBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\PickablePropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\PickablePropsForm.designer.cs">
+      <DependentUpon>PickablePropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\PopUpBoxPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\PopUpBoxPropsForm.Designer.cs">
+      <DependentUpon>PopUpBoxPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\PropPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\PropPropsForm.designer.cs">
+      <DependentUpon>PropPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\SimpleSwitchPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\SimpleSwitchPropsForm.Designer.cs">
+      <DependentUpon>SimpleSwitchPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\SnailSacrificeSwitchPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\SnailSacrificeSwitchPropsForm.designer.cs">
+      <DependentUpon>SnailSacrificeSwitchPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\SpikePropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\SpikePropsForm.designer.cs">
+      <DependentUpon>SpikePropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\StageEntrancePropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\StageEntrancePropsForm.Designer.cs">
+      <DependentUpon>StageEntrancePropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\StageExitPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\StageExitPropsForm.Designer.cs">
+      <DependentUpon>StageExitPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\StagePropPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\StagePropPropsForm.Designer.cs">
+      <DependentUpon>StagePropPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\TutorialSignPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\TutorialSignPropsForm.Designer.cs">
+      <DependentUpon>TutorialSignPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\WaterPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectProps\WaterPropsForm.Designer.cs">
+      <DependentUpon>WaterPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectsSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StageObjectsSelectorForm.Designer.cs">
+      <DependentUpon>StageObjectsSelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StagePropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StagePropertiesForm.Designer.cs">
+      <DependentUpon>StagePropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StagePropSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\StagePropSelectForm.designer.cs">
+      <DependentUpon>StagePropSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\ObjectBehaviour.cs" />
+    <Compile Include="StageEditor\Settings.cs" />
+    <Compile Include="StageEditor\StageValidationException.cs" />
+    <Compile Include="StageEditor\ToolboxItems\DynamiteTileToolboxItem.cs" />
+    <Compile Include="StageEditor\ToolboxItems\IObjectToolboxItem.cs" />
+    <Compile Include="StageEditor\ToolboxItems\ITileToolboxItem.cs" />
+    <Compile Include="StageEditor\ToolboxItems\IToolboxItem.cs" />
+    <Compile Include="StageEditor\ToolboxItems\ObjectToolboxItem.cs" />
+    <Compile Include="StageEditor\ToolboxItems\TileToolboxItem.cs" />
+    <Compile Include="StageEditor\ToolboxItems\ToolboxItem.cs" />
+    <Compile Include="StageObjects\Acid.cs" />
+    <Compile Include="StageObjects\Apple.cs" />
+    <Compile Include="StageObjects\Box.cs" />
+    <Compile Include="StageObjects\C4.cs" />
+    <Compile Include="StageObjects\CollisionTester.cs" />
+    <Compile Include="StageObjects\ControllableLaserCannon.cs" />
+    <Compile Include="StageObjects\Copper.cs" />
+    <Compile Include="StageObjects\Crystal.cs" />
+    <Compile Include="StageObjects\DirectionalBox.cs" />
+    <Compile Include="StageObjects\Dynamite.cs" />
+    <Compile Include="StageObjects\DynamiteBox.cs" />
+    <Compile Include="StageObjects\DynamiteBoxCounted.cs" />
+    <Compile Include="StageObjects\DynamiteBoxTriggered.cs" />
+    <Compile Include="StageObjects\EvilSnail.cs" />
+    <Compile Include="StageObjects\Explosion.cs" />
+    <Compile Include="StageObjects\FadeInOutBox.cs" />
+    <Compile Include="StageObjects\Fire.cs" />
+    <Compile Include="StageObjects\FixedLaserCannon.cs" />
+    <Compile Include="StageObjects\FlameLight.cs" />
+    <Compile Include="StageObjects\ICursorInteractable.cs" />
+    <Compile Include="StageObjects\InformationSign.cs" />
+    <Compile Include="StageObjects\IRotationControllable.cs" />
+    <Compile Include="StageObjects\ISwitchable.cs" />
+    <Compile Include="StageObjects\Lamp.cs" />
+    <Compile Include="StageObjects\LaserBeam.cs" />
+    <Compile Include="StageObjects\LaserBeamMirror.cs" />
+    <Compile Include="StageObjects\LaserBeamSwitch.cs" />
+    <Compile Include="StageObjects\LaserCannonBase.cs" />
+    <Compile Include="StageObjects\Lava.cs" />
+    <Compile Include="StageObjects\Liquid.cs" />
+    <Compile Include="StageObjects\MovingObject.cs" />
+    <Compile Include="StageObjects\PickableObject.cs" />
+    <Compile Include="StageObjects\PopUpBox.cs" />
+    <Compile Include="StageObjects\Prop.cs" />
+    <Compile Include="StageObjects\RotationController.cs" />
+    <Compile Include="StageObjects\Salt.cs" />
+    <Compile Include="StageObjects\SingleLightEmitter.cs" />
+    <Compile Include="StageObjects\Slime.cs" />
+    <Compile Include="StageObjects\Snail.cs" />
+    <Compile Include="StageObjects\SnailCounter.cs" />
+    <Compile Include="StageObjects\SnailKing.cs" />
+    <Compile Include="StageObjects\SnailSacrificeSwitch.cs" />
+    <Compile Include="StageObjects\SnailShell.cs" />
+    <Compile Include="StageObjects\SnailTriggerSwitch.cs" />
+    <Compile Include="StageObjects\Spikes.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\CrownAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\HelmetAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\ISnailSpriteAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\SnailSpriteAccessory.cs" />
+    <Compile Include="StageObjects\SpriteAccessories\RocketAccessory.cs" />
+    <Compile Include="StageObjects\StageEntrance.cs" />
+    <Compile Include="StageObjects\StageExit.cs" />
+    <Compile Include="StageObjects\StageObject.cs" />
+    <Compile Include="StageObjects\StageObjectFactory.cs" />
+    <Compile Include="StageObjects\StageProp.cs" />
+    <Compile Include="StageObjects\Switch.cs" />
+    <Compile Include="StageObjects\TeleportEntrance.cs" />
+    <Compile Include="StageObjects\TileObject.cs" />
+    <Compile Include="StageObjects\TutorialSign.cs" />
+    <Compile Include="StageObjects\Water.cs" />
+    <Compile Include="StageObjects\WaterBubble.cs" />
+    <Compile Include="StageObjects\LiquidSwitch.cs" />
+    <Compile Include="StageObjects\LiquidPipe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StageObjects\LiquidPump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StageObjects\LiquidTap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Stages\CustomStage.cs" />
+    <Compile Include="Stages\GameplayRecorder.cs" />
+    <Compile Include="Stages\Hints\Hint.cs" />
+    <Compile Include="Stages\Hints\HintItem.cs" />
+    <Compile Include="Stages\Hints\HintItemObject.cs" />
+    <Compile Include="Stages\Hints\HintItemTile.cs" />
+    <Compile Include="Stages\Hints\HintManager.cs" />
+    <Compile Include="Stages\Hints\IHintItem.cs" />
+    <Compile Include="Stages\HUD\FastForwardStrips.cs" />
+    <Compile Include="Stages\HUD\HUDItemControls.cs" />
+    <Compile Include="Stages\HUD\HUDItemHint.cs" />
+    <Compile Include="Stages\HUD\HUDItemWarpButton.cs" />
+    <Compile Include="Stages\HUD\HUDMinimap.cs" />
+    <Compile Include="Stages\HUD\ToolsMenu.cs" />
+    <Compile Include="Stages\InGameCamera.cs" />
+    <Compile Include="Stages\Lighting\LightManager.cs" />
+    <Compile Include="Stages\Lighting\LightSource.cs" />
+    <Compile Include="Stages\MedalScoreCriteria.cs" />
+    <Compile Include="Stages\HUD\HUDItem.cs" />
+    <Compile Include="Stages\HUD\HUDItemGoal.cs" />
+    <Compile Include="Stages\HUD\HUDItemMissionStatus.cs" />
+    <Compile Include="Stages\HUD\HUDItemSnailsCounter.cs" />
+    <Compile Include="Stages\HUD\HUDItemSnailsDelivered.cs" />
+    <Compile Include="Stages\HUD\HUDItemTimer.cs" />
+    <Compile Include="Stages\HUD\StageHUD.cs" />
+    <Compile Include="Stages\IncomingMessage.cs" />
+    <Compile Include="Stages\Levels.cs" />
+    <Compile Include="Stages\SnailsBackgroundLayer.cs" />
+    <Compile Include="Stages\StageSound.cs" />
+    <Compile Include="Stages\StageSoundSource.cs" />
+    <Compile Include="Stages\StageStats.cs" />
+    <Compile Include="StageObjects\TeleportExit.cs" />
+    <Compile Include="StageObjects\Trampoline.cs" />
+    <Compile Include="StageObjects\Vitamin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\CreditsScreen.cs" />
+    <Compile Include="Screens\TransitionScreen.cs" />
+    <Compile Include="GameSettings.cs" />
+    <Compile Include="SnailsGame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ImageListx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ImageListx.Designer.cs">
+      <DependentUpon>ImageListx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ImageListxItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ImageListxItem.Designer.cs">
+      <DependentUpon>ImageListxItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ImageListxItemObject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ImageListxItemObject.Designer.cs">
+      <DependentUpon>ImageListxItemObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ImageListxItemTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ImageListxItemTile.Designer.cs">
+      <DependentUpon>ImageListxItemTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ObjectSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ObjectSelector.Designer.cs">
+      <DependentUpon>ObjectSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\TileSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\TileSelector.Designer.cs">
+      <DependentUpon>TileSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\Panelx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\Panelx.Designer.cs">
+      <DependentUpon>Panelx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ToolCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\ToolCtl.Designer.cs">
+      <DependentUpon>ToolCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Enums.cs" />
+    <Compile Include="StageEditor\Forms\EditToolsMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\EditToolsMenuForm.Designer.cs">
+      <DependentUpon>EditToolsMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\StageEditor.cs" />
+    <Compile Include="StageEditor\Controls\BoardCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\BoardCtl.Designer.cs">
+      <DependentUpon>BoardCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\Group.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\Group.Designer.cs">
+      <DependentUpon>Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\OpenImageTypeEditor.cs" />
+    <Compile Include="StageEditor\Controls\PropertiesCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\PropertiesCtl.Designer.cs">
+      <DependentUpon>PropertiesCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Controls\SolutionCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Controls\SolutionCtl.Designer.cs">
+      <DependentUpon>SolutionCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Diag.cs" />
+    <Compile Include="StageEditor\Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StageEditor\Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StageEditor\Globals.cs" />
+    <Compile Include="StageEditor\Goodies.cs" />
+    <Compile Include="StageEditor\IFormStateSave.cs" />
+    <Compile Include="StageEditor\UserSettings.cs" />
+    <Compile Include="StageEditor\Solution.cs" />
+    <Compile Include="StageEditor\EditorStage.cs" />
+    <Compile Include="StageEditor\XmlHelper.cs" />
+    <Compile Include="StageObjects\WalkTester.cs" />
+    <Compile Include="Stages\Board.cs" />
+    <Compile Include="Stages\BoardPath.cs" />
+    <Compile Include="Stages\BoardPathNode.cs" />
+    <Compile Include="Stages\PathSegment.cs" />
+    <Compile Include="Stages\Stage.cs" />
+    <Compile Include="Stages\StageCursor.cs" />
+    <Compile Include="Stages\StageData.cs" />
+    <Compile Include="Stages\Tile.cs" />
+    <Compile Include="Stages\TileCell.cs" />
+    <Compile Include="Stages\TileCellCoords.cs" />
+    <Compile Include="Stages\TileFragments.cs" />
+    <Compile Include="ToolObjects\ToolApple.cs" />
+    <Compile Include="ToolObjects\ToolBox.cs" />
+    <Compile Include="ToolObjects\ToolCopper.cs" />
+    <Compile Include="ToolObjects\ToolCrate.cs" />
+    <Compile Include="ToolObjects\ToolDirectionalBox.cs" />
+    <Compile Include="ToolObjects\ToolDynamite.cs" />
+    <Compile Include="ToolObjects\ToolDynamiteBox.cs" />
+    <Compile Include="ToolObjects\ToolDynamiteBoxTriggered.cs" />
+    <Compile Include="ToolObjects\ToolEndMission.cs" />
+    <Compile Include="ToolObjects\ToolObject.cs" />
+    <Compile Include="ToolObjects\ToolSalt.cs" />
+    <Compile Include="ToolObjects\ToolTrampoline.cs" />
+    <Compile Include="ToolObjects\ToolVitamin.cs" />
+    <Compile Include="Tutorials\Tutorial.cs" />
+    <Compile Include="Tutorials\TutorialImage.cs" />
+    <Compile Include="Tutorials\TutorialItem.cs" />
+    <Compile Include="Tutorials\TutorialLine.cs" />
+    <Compile Include="Tutorials\TutorialText.cs" />
+    <Compile Include="Tutorials\TutorialTopic.cs" />
+    <Compile Include="Tutorials\TutorialTopicParser.cs" />
+    <Compile Include="Winforms\GameSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\GameSettingsForm.Designer.cs">
+      <DependentUpon>GameSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\LoadGameplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\LoadGameplayForm.Designer.cs">
+      <DependentUpon>LoadGameplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\SaveGameplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\SaveGameplayForm.Designer.cs">
+      <DependentUpon>SaveGameplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\ScreenModeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\ScreenModeForm.Designer.cs">
+      <DependentUpon>ScreenModeForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.3.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Debuging\DebugForm.resx">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debuging\SettingsInfo.resx">
+      <DependentUpon>SettingsInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debuging\TileObjectInfo.resx">
+      <DependentUpon>TileObjectInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Controls\BoardCtl.resx">
+      <DependentUpon>BoardCtl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Controls\EditableObjectList.resx">
+      <DependentUpon>EditableObjectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Controls\Group.resx">
+      <DependentUpon>Group.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Controls\ImageListx.resx">
+      <DependentUpon>ImageListx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Controls\ImageListxItem.resx">
+      <DependentUpon>ImageListxItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Controls\ObjectSelector.resx">
+      <DependentUpon>ObjectSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Controls\TileSelector.resx">
+      <DependentUpon>TileSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Controls\PropertiesCtl.resx">
+      <DependentUpon>PropertiesCtl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Controls\SolutionCtl.resx">
+      <DependentUpon>SolutionCtl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Controls\ToolCtl.resx">
+      <DependentUpon>ToolCtl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\EditLayerForm.resx">
+      <DependentUpon>EditLayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\EditToolsMenuForm.resx">
+      <DependentUpon>EditToolsMenuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\HintsForm.resx">
+      <DependentUpon>HintsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\InformationSignSelectForm.resx">
+      <DependentUpon>InformationSignSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\LoadCustomStageForm.resx">
+      <DependentUpon>LoadCustomStageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\MoveTilesAndObjectsForm.resx">
+      <DependentUpon>MoveTilesAndObjectsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\NewCustomStageForm.resx">
+      <DependentUpon>NewCustomStageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\ObjectSelectedBaseForm.resx">
+      <DependentUpon>ObjectSelectedBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\PickableSelectForm.resx">
+      <DependentUpon>PickableSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\PreferencesForm.resx">
+      <DependentUpon>PreferencesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageDataEditorForm.resx">
+      <DependentUpon>StageDataEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\ControllableLaserCannonForm.resx">
+      <DependentUpon>ControllableLaserCannonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\CrystalPropsForm.resx">
+      <DependentUpon>CrystalPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\DynamiteBoxCountedForm.resx">
+      <DependentUpon>DynamiteBoxCountedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\FadeInOutBoxPropsForm.resx">
+      <DependentUpon>FadeInOutBoxPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\LampPropsForm.resx">
+      <DependentUpon>LampPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\LaserBeamMirrorPropsForm.resx">
+      <DependentUpon>LaserBeamMirrorPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\LaserCannonBaseForm.resx">
+      <DependentUpon>LaserCannonBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\LaserSwitchPropsForm.resx">
+      <DependentUpon>LaserSwitchPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\LiquidPipePropsForm.resx">
+      <DependentUpon>LiquidPipePropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\LiquidPumpPropsForm.resx">
+      <DependentUpon>LiquidPumpPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\LiquidTapPropsForm.resx">
+      <DependentUpon>LiquidTapPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\ObjectPropsBaseForm.resx">
+      <DependentUpon>ObjectPropsBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\PickablePropsForm.resx">
+      <DependentUpon>PickablePropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\PopUpBoxPropsForm.resx">
+      <DependentUpon>PopUpBoxPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\PropPropsForm.resx">
+      <DependentUpon>PropPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\SimpleSwitchPropsForm.resx">
+      <DependentUpon>SimpleSwitchPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\SnailSacrificeSwitchPropsForm.resx">
+      <DependentUpon>SnailSacrificeSwitchPropsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\SpikePropsForm.resx">
+      <DependentUpon>SpikePropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\StageEntrancePropsForm.resx">
+      <DependentUpon>StageEntrancePropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\StageExitPropsForm.resx">
+      <DependentUpon>StageExitPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\TutorialSignPropsForm.resx">
+      <DependentUpon>TutorialSignPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectProps\WaterPropsForm.resx">
+      <DependentUpon>WaterPropsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StageObjectsSelectorForm.resx">
+      <DependentUpon>StageObjectsSelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StagePropertiesForm.resx">
+      <DependentUpon>StagePropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StageEditor\Forms\StagePropSelectForm.resx">
+      <DependentUpon>StagePropSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\GameSettingsForm.resx">
+      <DependentUpon>GameSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\LoadGameplayForm.resx">
+      <DependentUpon>LoadGameplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\SaveGameplayForm.resx">
+      <DependentUpon>SaveGameplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\ScreenModeForm.resx">
+      <DependentUpon>ScreenModeForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StageEditor\Images\goal_escort_icon.png" />
+    <Content Include="StageEditor\Images\goal_kill_icon.png" />
+    <Content Include="StageEditor\Images\goal_king_icon.png" />
+    <Content Include="StageEditor\Images\goal_time_icon.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-street-lamp.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-dynamite-counted-box.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-tutorial-sign.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-directional-box-ccw.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-directional-box-cw.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-directional-box-ccw.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-directional-box-cw.png" />
+    <EmbeddedResource Include="StageEditor\Images\solution_icon.png" />
+    <EmbeddedResource Include="StageEditor\Images\theme_a_icon.png" />
+    <EmbeddedResource Include="StageEditor\Images\theme_b_icon.png" />
+    <EmbeddedResource Include="StageEditor\Images\theme_custom_icon.png" />
+    <EmbeddedResource Include="StageEditor\Images\theme_c_icon.png" />
+    <EmbeddedResource Include="StageEditor\Images\theme_d_icon.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-sg2.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-sg3.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-ThemeA-sg0.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-ThemeA-sg1.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-ThemeB-sg0.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-ThemeB-sg1.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-ThemeC-sg0.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-ThemeC-sg1.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-ThemeD-sg0.png" />
+    <EmbeddedResource Include="StageEditor\Images\TilesThumbnails\tile-ThemeD-sg1.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-acid.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-apple.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-c4.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-candle-holder.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-crystal.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-dynamite-triggered-box.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-fade-box.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-fire.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-fixed-laser-cannon.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-lamp.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-laser-cannon.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-laser-mirror.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-laser-switch.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-lava.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-liquid-pipe.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-liquid-pump.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-liquid-tap.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-pickup.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-popup-box.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-salt.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-sign.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-simple-switch.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-snail-switch.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-spikes.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeA-counter.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeA-entrance.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeA-exit.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeA-prop.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeB-counter.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeB-entrance.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeB-exit.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeB-prop.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeC-counter.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeC-entrance.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeC-exit.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeC-prop.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeD-counter.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeD-entrance.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeD-exit.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-ThemeD-prop.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-trampoline.png" />
+    <EmbeddedResource Include="StageEditor\Images\ToolsThumbnails\obj-water.png" />
+    <EmbeddedResource Include="StageEditor\Images\SignsThumbnails\sign-danger.png" />
+    <EmbeddedResource Include="StageEditor\Images\SignsThumbnails\sign-exit.png" />
+    <EmbeddedResource Include="StageEditor\Images\SignsThumbnails\sign-laser.png" />
+    <EmbeddedResource Include="Winforms\snails-logo.png" />
+    <EmbeddedResource Include="Resources\cursor-busy.png" />
+    <EmbeddedResource Include="Resources\cursor-default.png" />
+    <EmbeddedResource Include="Resources\cursor-forbidden.png" />
+    <EmbeddedResource Include="Resources\cursor-salt.png" />
+    <EmbeddedResource Include="Resources\cursor-salt-forbidden.png" />
+    <EmbeddedResource Include="Resources\cursor-outofstock.png" />
+    <Content Include="StageEditor\Data\settings.xml" />
+    <Content Include="StageEditor\Data\themes.xml" />
+    <EmbeddedResource Include="StageEditor\StageEditor.Settings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StageEditor\Images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrainEngine\BrainEngineMonogameContentPipeline.csproj">
+      <Project>{A1CA2125-56AB-43E8-82AC-52BDA0A1FD33}</Project>
+      <Name>BrainEngineMonogameContentPipeline</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9990E3CC-6BD4-4CF9-8D79-4FC6652EDB11}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TwoBrainsGames.BrainEngine</RootNamespace>
+    <AssemblyName>TwoBrainsGames.BrainEngine</AssemblyName>
+    <ReleaseVersion>1.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;MONOGAME;IOS;GAMER_SERVICES</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <DefineConstants>MONOGAME;IOS;GAMER_SERVICES</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MTiRate">
+      <HintPath>..\Libs\MTiRate.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Audio\" />
+    <Folder Include="Collision\" />
+    <Folder Include="Common\" />
+    <Folder Include="Data\" />
+    <Folder Include="Debugging\" />
+    <Folder Include="Effects\" />
+    <Folder Include="Graphics\" />
+    <Folder Include="Input\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Resources\" />
+    <Folder Include="SpacePartitioning\" />
+    <Folder Include="UI\" />
+    <Folder Include="RemoteServices\" />
+    <Folder Include="Store\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\MusicManager.cs" />
+    <Compile Include="Audio\SampleManager.cs" />
+    <Compile Include="Collision\BoundingCircle.cs" />
+    <Compile Include="Collision\BoundingSquare.cs" />
+    <Compile Include="Collision\ICollidable.cs" />
+    <Compile Include="Collision\OOBoundingBox.cs" />
+    <Compile Include="Data\Content\GenericContentReader.cs" />
+    <Compile Include="Data\Content\SpriteSetReader.cs" />
+    <Compile Include="Data\Content\TextFontReader.cs" />
+    <Compile Include="Data\Content\XDFReader.cs" />
+    <Compile Include="Data\DataFiles\DataFile.cs" />
+    <Compile Include="Data\DataFiles\DataFileField.cs" />
+    <Compile Include="Data\DataFiles\DataFileFormatException.cs" />
+    <Compile Include="Data\DataFiles\DataFileRecord.cs" />
+    <Compile Include="Data\DataFiles\DataFileRecordList.cs" />
+    <Compile Include="Data\DataFiles\FlagsType.cs" />
+    <Compile Include="Data\DataFiles\IDataFileReader.cs" />
+    <Compile Include="Data\DataFiles\IDataFileSerializable.cs" />
+    <Compile Include="Data\DataFiles\IDataFileWriter.cs" />
+    <Compile Include="Data\DataFiles\PathManager.cs" />
+    <Compile Include="Data\DataFiles\BinaryDataFile\BinaryDataFile.cs" />
+    <Compile Include="Data\DataFiles\BinaryDataFile\BinaryDataFileReader.cs" />
+    <Compile Include="Data\DataFiles\BinaryDataFile\BinaryDataFileWriter.cs" />
+    <Compile Include="Data\DataFiles\XmlDataFile\XmlDataFileReader.cs" />
+    <Compile Include="Data\DataFiles\XmlDataFile\XmlDataFileWriter.cs" />
+    <Compile Include="Debugging\AssertionException.cs" />
+    <Compile Include="Debugging\DebugInfo.cs" />
+    <Compile Include="Debugging\DebugItem.cs" />
+    <Compile Include="Debugging\FPSCounter.cs" />
+    <Compile Include="Debugging\PerformanceCounter.cs" />
+    <Compile Include="Debugging\TimerCounter.cs" />
+    <Compile Include="Effects\BlinkEffect.cs" />
+    <Compile Include="Effects\ColorEffect.cs" />
+    <Compile Include="Effects\ITransformEffect.cs" />
+    <Compile Include="Effects\ParticlesEffect.cs" />
+    <Compile Include="Effects\TransformBlender.cs" />
+    <Compile Include="Effects\TransformEffectBase.cs" />
+    <Compile Include="Effects\ParticlesEffects\ExplosionEffect.cs" />
+    <Compile Include="Effects\Shades\WaterShadeEffect.cs" />
+    <Compile Include="Effects\TransformEffects\GravityEffect.cs" />
+    <Compile Include="Effects\TransformEffects\HooverEffect.cs" />
+    <Compile Include="Effects\TransformEffects\LinearMoveEffect.cs" />
+    <Compile Include="Effects\TransformEffects\MotionEffect.cs" />
+    <Compile Include="Effects\TransformEffects\PathFollowEffect.cs" />
+    <Compile Include="Effects\TransformEffects\RotationEffect.cs" />
+    <Compile Include="Effects\TransformEffects\ScaleEffect.cs" />
+    <Compile Include="Effects\TransformEffects\ShakeEffect.cs" />
+    <Compile Include="Effects\TransformEffects\SquashEffect.cs" />
+    <Compile Include="Graphics\BackgroundLayer.cs" />
+    <Compile Include="Graphics\Camera2D.cs" />
+    <Compile Include="Graphics\Frame.cs" />
+    <Compile Include="Graphics\ICamera2D.cs" />
+    <Compile Include="Graphics\LineBatch.cs" />
+    <Compile Include="Graphics\Object2D.cs" />
+    <Compile Include="Graphics\RenderMask.cs" />
+    <Compile Include="Graphics\Sprite.cs" />
+    <Compile Include="Graphics\SpriteAnimation.cs" />
+    <Compile Include="Graphics\SpriteAnimationQueue.cs" />
+    <Compile Include="Graphics\SpriteAnimationQueueItem.cs" />
+    <Compile Include="Input\ControllerInput.cs" />
+    <Compile Include="Input\ControllerRumble.cs" />
+    <Compile Include="Input\GamePadInput.cs" />
+    <Compile Include="Input\InputBase.cs" />
+    <Compile Include="Input\KeyboardInput.cs" />
+    <Compile Include="Input\KeyboardMapping.cs" />
+    <Compile Include="Input\MouseInput.cs" />
+    <Compile Include="Input\TouchInput.cs" />
+    <Compile Include="Localization\LanguageCode.cs" />
+    <Compile Include="Localization\LanguageManager.cs" />
+    <Compile Include="Resources\Image.cs" />
+    <Compile Include="Resources\Music.cs" />
+    <Compile Include="Resources\Resource.cs" />
+    <Compile Include="Resources\ResourceManager.cs" />
+    <Compile Include="Resources\Sample.cs" />
+    <Compile Include="Resources\SpriteSet.cs" />
+    <Compile Include="Resources\TextFont.cs" />
+    <Compile Include="Resources\TextFontChar.cs" />
+    <Compile Include="SpacePartitioning\IQuadtreeContainable.cs" />
+    <Compile Include="SpacePartitioning\Quadtree.cs" />
+    <Compile Include="SpacePartitioning\QuadtreeNode.cs" />
+    <Compile Include="UI\Cursor.cs" />
+    <Compile Include="UI\SoftwareCursor.cs" />
+    <Compile Include="UI\Types.cs" />
+    <Compile Include="UI\Controls\ContainerControl.cs" />
+    <Compile Include="UI\Controls\ControlCollection.cs" />
+    <Compile Include="UI\Controls\UIButton.cs" />
+    <Compile Include="UI\Controls\UIControl.cs" />
+    <Compile Include="UI\Controls\UIImage.cs" />
+    <Compile Include="UI\Controls\UILabel.cs" />
+    <Compile Include="UI\Controls\UIMask.cs" />
+    <Compile Include="UI\Controls\UIMenu.cs" />
+    <Compile Include="UI\Controls\UIMenuItem.cs" />
+    <Compile Include="UI\Controls\UIMenuItemCollection.cs" />
+    <Compile Include="UI\Controls\UIPanel.cs" />
+    <Compile Include="UI\Controls\UIScrollablePanel.cs" />
+    <Compile Include="UI\Controls\UISlider.cs" />
+    <Compile Include="UI\Controls\UISpriteFontLabel.cs" />
+    <Compile Include="UI\Controls\UITextFontLabel.cs" />
+    <Compile Include="UI\Controls\UITextFontLabelInput.cs" />
+    <Compile Include="UI\Controls\UITimer.cs" />
+    <Compile Include="UI\Screens\Screen.cs" />
+    <Compile Include="UI\Screens\ScreenGlobalCache.cs" />
+    <Compile Include="UI\Screens\ScreenNavigator.cs" />
+    <Compile Include="UI\Screens\ScreensData.cs" />
+    <Compile Include="UI\Screens\UIScreen.cs" />
+    <Compile Include="UI\Screens\Effects\GaussianBlur.cs" />
+    <Compile Include="UI\Screens\Effects\GaussianBlurGray.cs" />
+    <Compile Include="UI\Screens\Effects\PostProcessor.cs" />
+    <Compile Include="UI\Screens\Transitions\BlurTransition.cs" />
+    <Compile Include="UI\Screens\Transitions\FadeInTransition.cs" />
+    <Compile Include="UI\Screens\Transitions\FadeOutTransition.cs" />
+    <Compile Include="UI\Screens\Transitions\Transition.cs" />
+    <Compile Include="BrainException.cs" />
+    <Compile Include="BrainGame.cs" />
+    <Compile Include="BrainGameTime.cs" />
+    <Compile Include="BrainHelper.cs" />
+    <Compile Include="BrainSettings.cs" />
+    <Compile Include="GameExtensions.cs" />
+    <Compile Include="IAssyncOperation.cs" />
+    <Compile Include="IBrainComponent.cs" />
+    <Compile Include="IHddIndicator.cs" />
+    <Compile Include="Mathematics.cs" />
+    <Compile Include="Debugging\BETrace.cs" />
+    <Compile Include="UI\Screens\Transitions\GrayoutTransition.cs" />
+    <Compile Include="Parsers.cs" />
+    <Compile Include="Player\AchievementsManager.cs" />
+    <Compile Include="Player\BrainAchievement.cs" />
+    <Compile Include="Secutiry\Encryption.cs" />
+    <Compile Include="Effects\FlickEffect.cs" />
+    <Compile Include="Input\InputRecorder.cs" />
+    <Compile Include="Input\InputRecorderStream.cs" />
+    <Compile Include="Debugging\MemoryPeakCounter.cs" />
+    <Compile Include="Debugging\MemoryUsageCounter.cs" />
+    <Compile Include="Resources\BrainContentManager.cs" />
+    <Compile Include="BrainPath.cs" />
+    <Compile Include="RemoteServices\Network.cs" />
+    <Compile Include="RemoteServices\RemoteAPICallResult.cs" />
+    <Compile Include="RemoteServices\RemoteAPIStatusCode.cs" />
+    <Compile Include="RemoteServices\RemoteServicesManager.cs" />
+    <Compile Include="UI\Controls\UITextBox.cs" />
+    <Compile Include="Store\Rate.cs" />
+    <Compile Include="Store\iOSRate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.iOS.csproj">
+      <Project>{DB8508BB-9849-4CC2-BC0F-8EB5DACB3C47}</Project>
+      <Name>MonoGame.Framework.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.iOS.csproj">
+      <Project>{734EAA48-F1CA-481A-B391-0285BC0E8B40}</Project>
+      <Name>Lidgren.Network.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

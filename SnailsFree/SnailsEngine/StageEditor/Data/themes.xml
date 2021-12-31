@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Themes>
+  <Theme name="Garden">
+    <Background1 image= "..\..\src\XNAnew\SnailsHD\Content\images\ThemeA\garden-back-layer1.png"/>
+    <Background2 image= "..\..\src\XNAnew\SnailsHD\Content\images\ThemeA\garden-back-layer2.png"/>
+    <Tiles image= "..\..\src\XNAnew\SnailsHD\Content\images\ThemeA\garden-tiles.png"/>
+  </Theme>
+</Themes>
