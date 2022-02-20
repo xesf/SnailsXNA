@@ -27,6 +27,7 @@ Snails is now Free to Play on your common platforms like Steam.
 Hope you enjoy the game and perhaps use this source code to create new game levels.
 
 Download from Steam: https://store.steampowered.com/app/353260/Snails/
+
 Download from Itch.io: https://xesf.itch.io/snails
 
 
